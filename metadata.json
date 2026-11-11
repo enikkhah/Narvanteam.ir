@@ -1,0 +1,6 @@
+{
+  "name": "تیم فناوری نارون | Narvan Team",
+  "description": "وب‌سایت رسمی تیم فناوری نارون - توسعه‌دهنده نرم‌افزارهای یکپارچه، هوش مصنوعی و اینترنت اشیاء (IoT)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
