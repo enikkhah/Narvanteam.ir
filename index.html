@@ -1,343 +1,2144 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تیم فناوری نارون | Narvan Team</title>
-    <meta name="description" content="تیم فناوری نارون؛ توسعه‌دهنده نرم‌افزارهای یکپارچه، مدل‌های پیشرفته هوش مصنوعی و سیستم‌های مبتنی بر اینترنت اشیاء (IoT) برای رفع چالش‌های مدرن.">
-    <meta property="og:title" content="تیم فناوری نارون | Narvan Team">
-    <meta property="og:description" content="راهکارهای هوشمند؛ از فضای ابری تا دنیای فیزیکی - توسعه نرم‌افزار، هوش مصنوعی و اینترنت اشیاء (IoT).">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-green: #10B981; /* سبز شاداب */
-            --primary-green-dark: #059669;
-            --accent-amber: #F3A332; /* کهربایی نارون */
-            --bg-light: #F9FAFB;
-            --text-dark: #1F2937;
-            --text-gray: #4B5563;
-            --card-border: #E5E7EB;
-        }
-        * {
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Vazirmatn', Tahoma, 'Segoe UI', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            line-height: 1.75;
-        }
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            padding: 1rem 6%;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
-            color: var(--text-dark);
-        }
-        .logo-container img {
-            max-width: 120px;
-            max-height: 44px;
-            height: auto;
-            display: block;
-        }
-        .brand-title {
-            color: var(--text-dark);
-            font-weight: 800;
-            font-size: 1.15rem;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        nav a {
-            color: var(--text-gray);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s ease;
-        }
-        nav a:hover {
-            color: var(--primary-green);
-        }
-        .hero {
-            text-align: center;
-            padding: 5.5rem 5% 4.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #e6f7ef 100%);
-            border-bottom: 1px solid #e5f3ec;
-        }
-        .hero-badge {
-            display: inline-block;
-            background-color: rgba(16, 185, 129, 0.12);
-            color: var(--primary-green-dark);
-            font-weight: 700;
-            font-size: 0.85rem;
-            padding: 0.35rem 1rem;
-            border-radius: 50px;
-            margin-bottom: 1.25rem;
-        }
-        .hero h1 {
-            color: var(--primary-green);
-            font-size: 2.4rem;
-            font-weight: 800;
-            margin: 0 auto 1.25rem;
-            max-width: 780px;
-            line-height: 1.4;
-        }
-        .hero p {
-            font-size: 1.12rem;
-            color: var(--text-gray);
-            max-width: 640px;
-            margin: 0 auto 2rem;
-        }
-        .hero-actions {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .btn-primary {
-            background-color: var(--primary-green);
-            color: white;
-            text-decoration: none;
-            padding: 0.75rem 1.75rem;
-            border-radius: 10px;
-            font-weight: 700;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-        }
-        .btn-primary:hover {
-            background-color: var(--primary-green-dark);
-            transform: translateY(-2px);
-        }
-        .btn-outline {
-            background-color: white;
-            color: var(--text-dark);
-            text-decoration: none;
-            padding: 0.75rem 1.75rem;
-            border-radius: 10px;
-            font-weight: 700;
-            border: 1px solid var(--card-border);
-            transition: border-color 0.2s ease, transform 0.2s ease;
-        }
-        .btn-outline:hover {
-            border-color: var(--primary-green);
-            color: var(--primary-green-dark);
-            transform: translateY(-2px);
-        }
-        .section-title {
-            text-align: center;
-            font-size: 1.75rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            margin: 0 0 0.5rem;
-        }
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-gray);
-            margin: 0 auto 2.5rem;
-            max-width: 560px;
-            font-size: 1rem;
-        }
-        .services-wrapper {
-            padding: 4.5rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-        }
-        .service-card {
-            background: white;
-            padding: 2.25rem 2rem;
-            border-radius: 14px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-            flex: 1;
-            min-width: 260px;
-            max-width: 360px;
-            text-align: center;
-            border-bottom: 4px solid var(--primary-green);
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-        /* واترمارک لوگو در پس زمینه کارت ها */
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('logo.svg');
-            background-size: 50%;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.03;
-            z-index: 0;
-        }
-        .service-card h3, .service-card p {
-            position: relative;
-            z-index: 1;
-        }
-        .service-card h3 {
-            color: var(--text-dark);
-            margin-top: 0;
-            margin-bottom: 0.75rem;
-            font-size: 1.25rem;
-            font-weight: 700;
-        }
-        .service-card p {
-            color: var(--text-gray);
-            margin: 0;
-            font-size: 0.98rem;
-        }
-        /* رنگ متمایز برای ستون های سخت افزار و AI */
-        .card-ai { border-bottom-color: #8B5CF6; }
-        .card-iot { border-bottom-color: #4B5563; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>گروه فناوری نارون | Narvan Team — نرم‌افزار، هوش مصنوعی و اینترنت اشیاء</title>
+  <meta name="description" content="گروه فناوری نارون (Narvan Team)؛ توسعه‌دهنده نرم‌افزارهای یکپارچه موبایل و وب، اپلیکیشن یاد (YAAD)، راهکارهای هوش مصنوعی لبه (Edge AI) و سامانه‌های اینترنت اشیاء (IoT)." />
+  <meta property="og:title" content="گروه فناوری نارون | Narvan Team" />
+  <meta property="og:description" content="راهکارهای هوشمند؛ از فضای ابری تا دنیای فیزیکی — توسعه نرم‌افزار، هوش مصنوعی و اینترنت اشیاء (IoT)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo-full.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* 60% Dominant Neutral Canvas (Google-style Crisp White & Alabaster) */
+      --bg-canvas: #FFFFFF;
+      --bg-subtle: #F8FAFC;
+      --bg-sage: #F3F8F5;
 
-        .projects {
-            padding: 4.5rem 5%;
-            background-color: white;
-            text-align: center;
-            border-top: 1px solid var(--card-border);
-        }
-        .project-card {
-            display: inline-block;
-            background: var(--bg-light);
-            padding: 1.4rem 3rem;
-            border-radius: 50px;
-            border: 2px solid var(--accent-amber);
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-        }
-        .project-card:hover {
-            transform: scale(1.04);
-            background-color: var(--accent-amber);
-            color: white;
-        }
-        footer {
-            text-align: center;
-            padding: 2.5rem 5%;
-            background-color: var(--text-dark);
-            color: white;
-        }
-        footer p {
-            margin: 0 0 0.75rem;
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-        footer a {
-            color: var(--primary-green);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        footer a:hover {
-            color: var(--accent-amber);
-        }
-        @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-            header {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-            .project-card {
-                padding: 1.1rem 1.75rem;
-                font-size: 0.95rem;
-            }
-        }
-    </style>
+      /* 30% Structural Surfaces & Typography */
+      --surface: #FFFFFF;
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --border-hairline: #E2E8F0;
+      --border-strong: #CBD5E1;
+
+      /* 10% Brand & Complementary Colors (Extracted from Narvan Logos) */
+      --narvan-teal: #0D4A42;        /* Deep Forest Teal - Logo Trunk & Wordmark */
+      --narvan-teal-dark: #072F29;   /* Deep Obsidian Teal */
+      --narvan-teal-soft: #E6F2F0;   /* Soft Teal Surface */
+
+      --narvan-green: #519E47;       /* Organic Elm Leaf Green - Logo Leaves */
+      --narvan-green-dark: #3D7D35;
+      --narvan-green-soft: #ECF6EA;
+
+      --narvan-amber: #EEA125;       /* Digital Pixel Golden Amber - Logo Pixels */
+      --narvan-amber-dark: #C87D0E;
+      --narvan-amber-soft: #FEF6E6;
+
+      /* Complementary Colors (Cobalt Indigo for AI & Warm Orange for YAAD) */
+      --comp-indigo: #1D4ED8;
+      --comp-indigo-soft: #EFF6FF;
+      --yaad-orange: #FF8C00;
+      --yaad-orange-soft: #FFF4E5;
+
+      /* Subtle Elevation */
+      --shadow-card: 0 4px 20px -2px rgba(13, 74, 66, 0.06);
+      --shadow-hover: 0 12px 28px -4px rgba(13, 74, 66, 0.12);
+      --radius-lg: 20px;
+      --radius-md: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Vazirmatn', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    code {
+      background: var(--narvan-teal-soft);
+      color: var(--narvan-teal);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum";
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       TOP NAVIGATION BAR (Strict 3-Zone Contract, Google Commercial Style)
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      height: 76px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .brand-logo-horizontal {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-fallback-text {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--narvan-teal);
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding: 6px 0;
+      position: relative;
+      transition: color 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background-color: var(--narvan-teal);
+      transform: scaleX(0);
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-links a:hover {
+      color: var(--narvan-teal);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 10px 22px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background-color: var(--narvan-teal);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--narvan-teal-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(13, 74, 66, 0.18);
+    }
+
+    .btn-yaad {
+      background-color: var(--yaad-orange);
+      color: #FFFFFF;
+    }
+
+    .btn-yaad:hover {
+      background-color: #E07B00;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(255, 140, 0, 0.24);
+    }
+
+    .btn-outline {
+      background-color: var(--surface);
+      color: var(--narvan-teal);
+      border-color: var(--border-strong);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--narvan-teal);
+      background-color: var(--narvan-teal-soft);
+    }
+
+    /* ==========================================================================
+       1. HERO SECTION (2-Column Enterprise Split + Full Logo Showcase)
+       ========================================================================== */
+    .hero {
+      padding: 76px 0 64px;
+      background: radial-gradient(circle at 15% 20%, var(--narvan-green-soft) 0%, transparent 42%),
+                  radial-gradient(circle at 85% 80%, var(--narvan-amber-soft) 0%, transparent 40%),
+                  var(--bg-canvas);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--narvan-green-dark);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 3.8vw, 3.45rem);
+      font-weight: 900;
+      line-height: 1.3;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      text-wrap: balance;
+    }
+
+    .hero h1 .highlight-teal {
+      color: var(--narvan-teal);
+    }
+
+    .hero h1 .highlight-green {
+      color: var(--narvan-green-dark);
+    }
+
+    .hero-lead {
+      font-size: 1.08rem;
+      color: var(--text-secondary);
+      max-width: 64ch;
+      margin-bottom: 32px;
+      line-height: 1.85;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .hero-showcase-card {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 24px;
+      padding: 36px 28px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-emblem-wrap {
+      width: 220px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .hero-emblem-wrap img {
+      max-height: 230px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .hero-pillars-bar {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    .pillar-mini {
+      padding: 10px 8px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .pillar-mini.p-green {
+      background: var(--narvan-green-soft);
+      color: var(--narvan-green-dark);
+    }
+
+    .pillar-mini.p-indigo {
+      background: var(--comp-indigo-soft);
+      color: var(--comp-indigo);
+    }
+
+    .pillar-mini.p-amber {
+      background: var(--narvan-amber-soft);
+      color: var(--narvan-amber-dark);
+    }
+
+    .pillar-mini strong {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .pillar-mini span {
+      font-size: 0.74rem;
+      opacity: 0.88;
+    }
+
+    .metrics-strip {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-hairline);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .metric-item {
+      padding: 4px 0;
+    }
+
+    .metric-val {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: var(--narvan-teal);
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       2. CORE CAPABILITIES (Bento Grid)
+       ========================================================================== */
+    .section {
+      padding: 88px 0;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .section-subtle {
+      background-color: var(--bg-subtle);
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .section-kicker {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--narvan-teal);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 2.8vw, 2.35rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.3;
+      text-wrap: balance;
+    }
+
+    .section-desc {
+      color: var(--text-secondary);
+      max-width: 58ch;
+      font-size: 1rem;
+    }
+
+    .bento-services {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-strong);
+    }
+
+    .service-card.span-4 {
+      grid-column: span 4;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .service-card.s-software .service-icon {
+      background: var(--narvan-green-soft);
+      color: var(--narvan-green-dark);
+    }
+
+    .service-card.s-ai .service-icon {
+      background: var(--comp-indigo-soft);
+      color: var(--comp-indigo);
+    }
+
+    .service-card.s-iot .service-icon {
+      background: var(--narvan-amber-soft);
+      color: var(--narvan-amber-dark);
+    }
+
+    .service-card h3 {
+      font-size: 1.32rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .service-specs {
+      padding-top: 18px;
+      border-top: 1px solid var(--border-hairline);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* ==========================================================================
+       3. FLAGSHIP PRODUCT: YAAD SHOWCASE & 12-SCREENSHOT INTERACTIVE GALLERY
+       ========================================================================== */
+    .yaad-spotlight-shell {
+      background: linear-gradient(145deg, #0D1726 0%, #0A2724 100%);
+      color: #F8FAFC;
+      border-radius: 28px;
+      padding: 48px 40px;
+      margin-bottom: 56px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 45px -10px rgba(13, 74, 66, 0.25);
+    }
+
+    .yaad-spotlight-top {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      margin-bottom: 36px;
+    }
+
+    .yaad-brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .yaad-logo-frame {
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      background: rgba(255, 140, 0, 0.14);
+      border: 1px solid rgba(255, 140, 0, 0.4);
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .yaad-logo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .yaad-spotlight-top h3 {
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1.3;
+    }
+
+    .yaad-spotlight-top .yaad-sub {
+      color: var(--yaad-orange);
+      font-weight: 800;
+      font-size: 1.02rem;
+      margin-top: 4px;
+    }
+
+    .yaad-desc-text {
+      color: #CBD5E1;
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+
+    .yaad-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .yaad-feat-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .yaad-feat-box strong {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #FBBF24;
+      margin-bottom: 4px;
+    }
+
+    .yaad-feat-box span {
+      font-size: 0.82rem;
+      color: #CBD5E1;
+      line-height: 1.6;
+      display: block;
+    }
+
+    /* YAAD Screenshot Gallery Header & Filter Controls */
+    .yaad-gallery-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .yaad-gallery-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .yaad-gallery-subtitle {
+      font-size: 0.86rem;
+      color: #94A3B8;
+      margin-top: 2px;
+    }
+
+    .yaad-screen-tabs {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 5px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+    }
+
+    .yaad-screen-tab {
+      font-family: inherit;
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 7px 15px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: #CBD5E1;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .yaad-screen-tab:hover {
+      color: #FFFFFF;
+    }
+
+    .yaad-screen-tab.active {
+      background: var(--yaad-orange);
+      color: #0F172A;
+      font-weight: 800;
+    }
+
+    /* 12-Screenshot Responsive Phone Grid */
+    .yaad-screens-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .yaad-screen-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .yaad-screen-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--yaad-orange);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .phone-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 19.5;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #090D16;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 12px;
+    }
+
+    .phone-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .yaad-screen-card:hover .phone-frame img {
+      transform: scale(1.02);
+    }
+
+    .screen-caption-title {
+      font-size: 0.94rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .screen-caption-desc {
+      font-size: 0.8rem;
+      color: #94A3B8;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       OTHER NARVAN PORTFOLIO ITEMS & FILTER TABS
+       ========================================================================== */
+    .filter-tabs {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 6px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-hairline);
+      border-radius: 12px;
+      margin-bottom: 36px;
+    }
+
+    .filter-tab {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .filter-tab:hover {
+      color: var(--text-primary);
+    }
+
+    .filter-tab.active {
+      background: var(--surface);
+      color: var(--narvan-teal);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+    }
+
+    .portfolio-card {
+      grid-column: span 6;
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.18s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-meta-line {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .portfolio-card h3 {
+      font-size: 1.32rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .portfolio-slogan {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--narvan-teal);
+      margin-bottom: 14px;
+    }
+
+    .portfolio-card p {
+      font-size: 0.94rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 22px;
+    }
+
+    .spec-table {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-hairline);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 22px;
+      font-size: 0.84rem;
+    }
+
+    .spec-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .spec-row:last-child {
+      border-bottom: none;
+    }
+
+    .spec-row span {
+      color: var(--text-muted);
+    }
+
+    .spec-row strong {
+      color: var(--text-primary);
+      text-align: left;
+    }
+
+    /* ==========================================================================
+       4. BRAND IDENTITY & ARCHITECTURE (Standalone Tree-to-Pixel Mark)
+       ========================================================================== */
+    .architecture-banner {
+      background: var(--narvan-teal-dark);
+      color: #FFFFFF;
+      border-radius: 24px;
+      padding: 48px 40px;
+      display: grid;
+      grid-template-columns: 0.35fr 0.65fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .arch-brand-box {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: var(--text-primary);
+    }
+
+    .arch-brand-box img {
+      width: 140px;
+      height: auto;
+      margin-bottom: 14px;
+    }
+
+    .arch-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .arch-step h4 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--narvan-amber);
+      margin-bottom: 8px;
+    }
+
+    .arch-step p {
+      font-size: 0.88rem;
+      color: #CBD5E1;
+      line-height: 1.75;
+    }
+
+    /* ==========================================================================
+       5. INTERACTIVE CONTACT & INQUIRY SECTION
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-info-card {
+      background: var(--bg-sage);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-list li {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .contact-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .contact-list span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .contact-list a,
+    .contact-list strong {
+      font-size: 1rem;
+      color: var(--narvan-teal);
+      font-weight: 800;
+    }
+
+    .contact-form-card {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 11px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-canvas);
+      color: var(--text-primary);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--narvan-teal);
+      box-shadow: 0 0 0 3px rgba(13, 74, 66, 0.12);
+    }
+
+    .form-status {
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: none;
+    }
+
+    .form-status.success {
+      display: block;
+      background: var(--narvan-green-soft);
+      color: var(--narvan-green-dark);
+      border: 1px solid #BBF7D0;
+    }
+
+    /* ==========================================================================
+       6. LIGHTBOX MODAL FOR FULL-SCREEN SCREENSHOT INSPECTION
+       ========================================================================== */
+    .lightbox-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(9, 13, 22, 0.92);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .lightbox-backdrop.open {
+      display: flex;
+    }
+
+    .lightbox-dialog {
+      position: relative;
+      max-width: 440px;
+      width: 100%;
+      background: #111827;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 22px;
+      padding: 18px;
+      color: #FFFFFF;
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .lightbox-img-wrap {
+      max-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #090D16;
+      margin-bottom: 14px;
+    }
+
+    .lightbox-img-wrap img {
+      max-height: 70vh;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .lightbox-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--yaad-orange);
+      margin-bottom: 4px;
+    }
+
+    .lightbox-desc {
+      font-size: 0.86rem;
+      color: #CBD5E1;
+      margin-bottom: 14px;
+    }
+
+    .lightbox-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .lightbox-btn {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 0.15s ease;
+    }
+
+    .lightbox-btn:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* ==========================================================================
+       7. QUIET CORPORATE FOOTER
+       ========================================================================== */
+    footer {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border-hairline);
+      padding: 56px 0 36px;
+      color: var(--text-secondary);
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .footer-brand-col {
+      max-width: 420px;
+    }
+
+    .footer-brand-col img {
+      height: 42px;
+      width: auto;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand-col p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .footer-nav a:hover {
+      color: var(--narvan-teal);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 1024px) {
+      .yaad-screens-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .yaad-spotlight-top {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .architecture-banner,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .service-card.span-4,
+      .portfolio-card {
+        grid-column: span 12;
+      }
+      .yaad-screens-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .arch-steps {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .yaad-spotlight-shell {
+        padding: 32px 22px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .metrics-strip,
+      .yaad-feature-grid,
+      .yaad-screens-grid,
+      .hero-pillars-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <a href="/index.html" class="brand">
-            <div class="logo-container">
-                <!-- اگر لوگو با فرمت png است، کلمه svg را به png در خط زیر تغییر دهید -->
-                <img src="logo.svg" alt="لوگو تیم فناوری نارون" onerror="this.src='logo.png'; this.onerror=function(){this.style.display='none'};">
-            </div>
-            <span class="brand-title">تیم فناوری نارون</span>
-        </a>
-        <nav>
-            <a href="#services">خدمات ما</a>
-            <a href="#projects">محصولات</a>
-            <a href="/privacy.html">حریم خصوصی</a>
-        </nav>
-    </header>
+  <!-- TOP NAVIGATION BAR (3-Zone Contract) -->
+  <header>
+    <div class="container header-inner">
+      <!-- Zone 1: Horizontal Corporate Logo -->
+      <a href="index.html" class="brand-link" aria-label="گروه فناوری نارون - صفحه اصلی">
+        <img
+          src="logo-horizontal.png"
+          alt="گروه فناوری نارون | Narvan Team"
+          class="brand-logo-horizontal"
+          referrerpolicy="no-referrer"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"
+        />
+        <span class="brand-fallback-text">گروه فناوری نارون | Narvan Team</span>
+      </a>
 
+      <!-- Zone 2: Single-Line Navigation Links -->
+      <nav class="nav-links" aria-label="منوی اصلی">
+        <a href="#services">حوزه‌های تخصصی</a>
+        <a href="#yaad-showcase">اپلیکیشن یاد (YAAD)</a>
+        <a href="#projects">سایر پروژه‌ها</a>
+        <a href="privacy.html">حریم خصوصی</a>
+        <a href="#contact">تماس با ما</a>
+      </nav>
+
+      <!-- Zone 3: Single Primary Action -->
+      <div class="header-actions">
+        <a href="#yaad-showcase" class="btn btn-primary">مشاهده اپلیکیشن یاد</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
     <section class="hero">
-        <span class="hero-badge">تیم فناوری نارون | Narvan Team</span>
-        <h1>راهکارهای هوشمند؛ از فضای ابری تا دنیای فیزیکی</h1>
-        <p>توسعه‌دهنده نرم‌افزارهای یکپارچه، مدل‌های پیشرفته هوش مصنوعی و سیستم‌های مبتنی بر اینترنت اشیاء (IoT) برای رفع چالش‌های مدرن.</p>
-        <div class="hero-actions">
-            <a href="#services" class="btn-primary">آشنایی با خدمات</a>
-            <a href="#projects" class="btn-outline">مشاهده محصولات</a>
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-kicker">
+              <span>گروه فناوری نارون · Narvan Technology Group</span>
+            </div>
+            <h1>
+              راهکارهای هوشمند؛ از <span class="highlight-teal">نرم‌افزار و هوش مصنوعی</span> تا <span class="highlight-green">دنیای فیزیکی</span>
+            </h1>
+            <p class="hero-lead">
+              ما در <strong>گروه فناوری نارون (Narvan Team)</strong> سامانه‌های نرم‌افزاری، اپلیکیشن‌های موبایل با معماری محلی (Local-First)، مدل‌های کاربردی هوش مصنوعی و کنترلرهای سخت‌افزاری اینترنت اشیاء (IoT) را با تمرکز بر پایداری، امنیت داده و تجربه کاربری مهندسی می‌کنیم.
+            </p>
+            <div class="hero-cta-row">
+              <a href="#yaad-showcase" class="btn btn-primary">معرفی و تصاویر اپلیکیشن یاد</a>
+              <a href="privacy.html" class="btn btn-outline">سیاست حریم خصوصی اپ یاد</a>
+            </div>
+            <div class="hero-meta">
+              <span>توسعه نرم‌افزارهای وب و موبایل</span>
+              <span aria-hidden="true">·</span>
+              <span>پردازش هوشمند و محلی (On-Device AI)</span>
+              <span aria-hidden="true">·</span>
+              <span>سخت‌افزارهای امبدد و IoT</span>
+            </div>
+          </div>
+
+          <!-- Hero Emblem Showcase Card -->
+          <div class="hero-showcase-card">
+            <div class="hero-emblem-wrap">
+              <img
+                src="logo-full.png"
+                alt="نشان رسمی گروه فناوری نارون - پیوند طبیعت ارگانیک و فناوری دیجیتال"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 4px; font-weight: 600;">
+              پیوند ریشه‌های ارگانیک با مهندسی دیجیتال
+            </p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px;">
+              تلفیق برگ‌های سبز حیات با پیکسل‌های کهربایی دنیای فناوری
+            </p>
+            <div class="hero-pillars-bar">
+              <div class="pillar-mini p-green">
+                <strong>نرم‌افزار</strong>
+                <span>وب و موبایل</span>
+              </div>
+              <div class="pillar-mini p-indigo">
+                <strong>هوش مصنوعی</strong>
+                <span>پردازش لبه و داده</span>
+              </div>
+              <div class="pillar-mini p-amber">
+                <strong>اینترنت اشیاء</strong>
+                <span>سخت‌افزار هوشمند</span>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Full-Width Quantitative Proof Strip -->
+        <div class="metrics-strip tabular">
+          <div class="metric-item">
+            <div class="metric-val">۱۰۰٪ محلی</div>
+            <div class="metric-label">ذخیره‌سازی داده‌ها در حافظه دستگاه کاربر (اپ یاد)</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">۰ بایت</div>
+            <div class="metric-label">ارسال اطلاعات شخصی به سرورهای ابری یا تبلیغاتی</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">۳ ستون مهندسی</div>
+            <div class="metric-label">هم‌گرایی نرم‌افزار، هوش مصنوعی و سخت‌افزارهای IoT</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-val">۲۴/۷ پایدار</div>
+            <div class="metric-label">پایش بلادرنگ سنسورها و کنترلرهای صنعتی از راه دور</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="services" class="services-wrapper">
-        <h2 class="section-title">حوزه‌های فعالیت ما</h2>
-        <p class="section-subtitle">طراحی و مهندسی راهکارهای نرم‌افزاری و سخت‌افزاری با تمرکز بر کیفیت، امنیت و پایداری</p>
-        <div class="services">
-            <div class="service-card">
-                <h3>توسعه نرم‌افزار</h3>
-                <p>طراحی و پیاده‌سازی اپلیکیشن‌های موبایل و سامانه‌های تحت وب با تمرکز بر رابط کاربری مینیمال و عملکرد بالا.</p>
-            </div>
-            <div class="service-card card-ai">
-                <h3>هوش مصنوعی (AI)</h3>
-                <p>خودکارسازی فرآیندها، پردازش داده‌ها و یکپارچه‌سازی ابزارهای هوش مصنوعی برای ارتقای هوشمندی کسب‌وکارها.</p>
-            </div>
-            <div class="service-card card-iot">
-                <h3>اینترنت اشیاء (IoT)</h3>
-                <p>طراحی سیستم‌های نهفته، کنترلرهای هوشمند محیطی و اتوماسیون مبتنی بر میکروکنترلرها و ماژول‌های ارتباطی.</p>
-            </div>
+    <!-- 2. CORE CAPABILITIES SECTION -->
+    <section id="services" class="section section-subtle">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">توانمندی‌های مهندسی</span>
+            <h2 class="section-title">ستون‌های سه‌گانه فعالیت گروه فناوری نارون</h2>
+          </div>
+          <p class="section-desc">
+            راهکارهای ما از لایه رابط کاربری موبایل و وب تا الگوریتم‌های پردازشی و بردهای الکترونیکی کنترل تجهیزات را به‌صورت یکپارچه پوشش می‌دهد.
+          </p>
         </div>
+
+        <div class="bento-services">
+          <article class="service-card span-4 s-software">
+            <div>
+              <div class="service-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3>۰۱. مهندسی نرم‌افزار و موبایل</h3>
+              <p>
+                طراحی و توسعه اپلیکیشن‌های اندرویدی، وب‌اپلیکیشن‌های پیشرو (PWA) و سامانه‌های سازمانی با تمرکز بر معماری Local-First، سرعت اجرا و رابط کاربری استاندارد.
+              </p>
+            </div>
+            <div class="service-specs">
+              <span>• ذخیره‌سازی امن محلی و پشتیبان‌گیری خودکار روی دستگاه</span>
+              <span>• طراحی واکنش‌گرا و بهینه‌سازی مصرف باتری در اندروید</span>
+              <span>• پایپ‌لاین‌های یکپارچه بیلد و انتشار خودکار</span>
+            </div>
+          </article>
+
+          <article class="service-card span-4 s-ai">
+            <div>
+              <div class="service-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z"></path>
+                  <path d="M18 10v2a6 6 0 0 1-12 0v-2"></path>
+                  <line x1="12" y1="18" x2="12" y2="22"></line>
+                  <line x1="8" y1="22" x2="16" y2="22"></line>
+                </svg>
+              </div>
+              <h3>۰۲. هوش مصنوعی و پردازش لبه</h3>
+              <p>
+                پیاده‌سازی سیستم‌های تبدیل گفتار به متن، دسته‌بندی هوشمند، تحلیل داده‌های تله‌متری و خودکارسازی فرآیندها بدون به خطر انداختن حریم خصوصی کاربران.
+              </p>
+            </div>
+            <div class="service-specs">
+              <span>• پردازش گفتار و دستورات صوتی فارسی</span>
+              <span>• الگوریتم‌های پایش تطبیقی و کم‌مصرف (Adaptive Polling)</span>
+              <span>• تحلیل هوشمند داده‌های سنسورهای صنعتی و پیش‌بینی خطا</span>
+            </div>
+          </article>
+
+          <article class="service-card span-4 s-iot">
+            <div>
+              <div class="service-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <h3>۰۳. اینترنت اشیاء (IoT) و سخت‌افزار</h3>
+              <p>
+                طراحی سیستم‌های نهفته (Embedded Systems)، کنترلرهای هوشمند محیطی و اتوماسیون صنعتی مبتنی بر میکروکنترلرها و ماژول‌های مخابراتی GSM/SMS و شبکه.
+              </p>
+            </div>
+            <div class="service-specs">
+              <span>• کنترل از راه دور پمپ‌ها، رله‌ها و تجهیزات صنعتی</span>
+              <span>• ثبت پیوسته دما، رطوبت، فشار و پارامترهای محیطی</span>
+              <span>• عملکرد پایدار در محیط‌های فاقد اینترنت پایدار</span>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title" style="margin-bottom: 2rem;">محصولات ما</h2>
-        <a href="#" class="project-card">
-            اپلیکیشن یاد؛ یادآور آنچه مهم است
-        </a>
+    <!-- 3. FLAGSHIP PRODUCT: YAAD APPLICATION & 12 REAL SCREENSHOTS GALLERY -->
+    <section id="yaad-showcase" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker">محصول پرچمدار گروه فناوری نارون</span>
+            <h2 class="section-title">اپلیکیشن «یاد» (YAAD)؛ یادآور آنچه مهم است</h2>
+          </div>
+          <p class="section-desc">
+            دستیار جامع مدیریت یادآورها، ایده‌های چندرسانه‌ای، مناسبت‌های تقویم شمسی و رادار حصار مکانی هوشمند با ذخیره‌سازی ۱۰۰٪ محلی روی دستگاه شما.
+          </p>
+        </div>
+
+        <!-- Dark Enterprise Showcase Container Matching YAAD's Sleek Dark UI -->
+        <div class="yaad-spotlight-shell">
+          <div class="yaad-spotlight-top">
+            <div>
+              <div class="yaad-brand-lockup">
+                <div class="yaad-logo-frame">
+                  <img src="yaad-logo.svg" alt="لوگوی رسمی اپلیکیشن یاد (YAAD)" referrerpolicy="no-referrer" />
+                </div>
+                <div>
+                  <h3>اپلیکیشن هوشمند «یاد» (نسخه ۱.۲.۱۱)</h3>
+                  <div class="yaad-sub">YAAD; Reminding What Matters · محصول گروه فناوری نارون</div>
+                </div>
+              </div>
+
+              <p class="yaad-desc-text">
+                اپلیکیشن «یاد» با ترکیب <strong>تایم‌لاین زنده روزانه</strong>، <strong>ثبت سریع صوتی با ساعت غلتکی</strong>، <strong>رادار قطبی حصار مکانی (Geofence)</strong> و <strong>دفترچه ثبت ایده‌های چندرسانه‌ای</strong> طراحی شده است. تمامی اطلاعات بدون نیاز به حساب کاربری یا سرور ابری در حافظه داخلی دستگاه ذخیره شده و به‌صورت خودکار در پوشه <code>YAAD</code> پشتیبان‌گیری می‌شوند.
+              </p>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                <a href="privacy.html" class="btn btn-yaad">سند کامل حریم خصوصی اپ یاد ←</a>
+                <a href="#contact" class="btn btn-outline" style="background: rgba(255,255,255,0.08); color: #FFFFFF; border-color: rgba(255,255,255,0.2);">دریافت و پشتیبانی اپلیکیشن</a>
+              </div>
+            </div>
+
+            <div class="yaad-feature-grid">
+              <div class="yaad-feat-box">
+                <strong>تایم‌لاین و ساعت غلتکی</strong>
+                <span>نمایش زنده زمان اکنون، شمارش معکوس یادآور بعدی، تایپ صوتی و انتخابگر ساعت غلتکی</span>
+              </div>
+              <div class="yaad-feat-box">
+                <strong>رادار قطبی حصار مکانی</strong>
+                <span>هشدار ورود و خروج مکانی (۱۰۰ متر تا ۲۵ کیلومتر) با الگوریتم پایش تطبیقی کم‌مصرف GPS</span>
+              </div>
+              <div class="yaad-feat-box">
+                <strong>ثبت ایده‌های چندرسانه‌ای</strong>
+                <span>متن، تایپ صوتی، ضبط صدا، عکس، ویدیو، دست‌خط و تنظیم مستقیم یادآور برای هر ایده</span>
+              </div>
+              <div class="yaad-feat-box">
+                <strong>مناسبت‌ها و پشتیبان خودکار</strong>
+                <span>شمارش معکوس تولد و سالگرد ازدواج + پشتیبان‌گیری خودکار محلی در پوشه YAAD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive 12-Screenshot Gallery Header & Filter Bar -->
+          <div class="yaad-gallery-header">
+            <div>
+              <div class="yaad-gallery-title">گالری محیط کاربری اپلیکیشن یاد (۱۲ تصویر واقعی از محیط برنامه)</div>
+              <div class="yaad-gallery-subtitle">برای بزرگ‌نمایی و بررسی دقیق‌تر هر صفحه، روی تصویر مورد نظر کلیک کنید:</div>
+            </div>
+
+            <div class="yaad-screen-tabs" role="tablist" aria-label="فیلتر تصاویر محیط اپلیکیشن یاد">
+              <button type="button" class="yaad-screen-tab active" onclick="filterYaadScreens('all', this)">همه نماها (۱۲)</button>
+              <button type="button" class="yaad-screen-tab" onclick="filterYaadScreens('timeline', this)">تایم‌لاین و یادآورها (۴)</button>
+              <button type="button" class="yaad-screen-tab" onclick="filterYaadScreens('geofence', this)">رادار و حصار مکانی GPS (۴)</button>
+              <button type="button" class="yaad-screen-tab" onclick="filterYaadScreens('ideas', this)">ثبت ایده و افکار (۲)</button>
+              <button type="button" class="yaad-screen-tab" onclick="filterYaadScreens('occasions', this)">مناسبت‌ها و تولد (۲)</button>
+            </div>
+          </div>
+
+          <!-- 12 Screenshots Grid -->
+          <div class="yaad-screens-grid" id="yaad-screens-container">
+            <!-- Screen 1: Live Timeline -->
+            <div class="yaad-screen-card" data-screen-cat="timeline" onclick="openLightbox(0)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153420_YAAD_527c2556.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153420_YAAD_527c2556.jpg';"
+                  alt="تایم‌لاین هوشمند یادآورها در اپلیکیشن یاد"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۱. تایم‌لاین هوشمند روزانه</div>
+              <div class="screen-caption-desc">نمایش خط زمان «اکنون»، شمارش معکوس یادآور بعدی و تفکیک کارهای انجام‌شده</div>
+            </div>
+
+            <!-- Screen 2: Quick Reminder & Wheel Picker -->
+            <div class="yaad-screen-card" data-screen-cat="timeline" onclick="openLightbox(1)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153439_YAAD_472ad093.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153439_YAAD_472ad093.jpg';"
+                  alt="ثبت سریع یادآور با تایپ صوتی و ساعت غلتکی"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۲. ثبت سریع و ساعت غلتکی</div>
+              <div class="screen-caption-desc">ورودی صوتی، انتخابگر ساعت غلتکی، میانبرهای زمانی (+۵ دقیقه، فردا ۹ صبح) و تاریخ شمسی</div>
+            </div>
+
+            <!-- Screen 3: Live Polar Radar Geofence -->
+            <div class="yaad-screen-card" data-screen-cat="geofence" onclick="openLightbox(2)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261112_015405_YAAD_b2ac2bb3.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_015405_YAAD_b2ac2bb3.jpg';"
+                  alt="رادار قطبی زنده حصار مکانی در اپلیکیشن یاد"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۳. رادار قطبی زنده حصار مکانی</div>
+              <div class="screen-caption-desc">نمایش زنده جهت و بردار خروج از محدوده مکانی همراه با فاصله لحظه‌ای و مسیریابی</div>
+            </div>
+
+            <!-- Screen 4: Geofence Radius & Trigger Settings -->
+            <div class="yaad-screen-card" data-screen-cat="geofence" onclick="openLightbox(3)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153804_YAAD_ca3235fe.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153804_YAAD_ca3235fe.jpg';"
+                  alt="تنظیم شعاع و شرط ورود و خروج حصار مکانی"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۴. تنظیم شعاع حصار مکانی</div>
+              <div class="screen-caption-desc">تعیین شعاع دقیق از ۱۰۰ متر تا ۲۵ کیلومتر و انتخاب شرط هشدار ورود، خروج یا هر دو</div>
+            </div>
+
+            <!-- Screen 5: Idea Capture Modal -->
+            <div class="yaad-screen-card" data-screen-cat="ideas" onclick="openLightbox(4)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153821_YAAD_4f6892d9.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153821_YAAD_4f6892d9.jpg';"
+                  alt="ثبت ایده و افکار لحظه‌ای با قابلیت تنظیم یادآور"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۵. ثبت ایده چندرسانه‌ای</div>
+              <div class="screen-caption-desc">ثبت متن، تایپ صوتی، صدا، عکس، ویدیو و نقاشی دست‌خط + تنظیم مستقیم یادآور برای ایده</div>
+            </div>
+
+            <!-- Screen 6: Ideas List View -->
+            <div class="yaad-screen-card" data-screen-cat="ideas" onclick="openLightbox(5)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153838_YAAD_25f076a8.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153838_YAAD_25f076a8.jpg';"
+                  alt="سازماندهی ایده‌ها و افکار در اپلیکیشن یاد"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۶. سازماندهی ایده‌ها و افکار</div>
+              <div class="screen-caption-desc">دسته‌بندی ایده‌ها (کاری، خانواده، شخصی) با نمایش زمان یادآور متصل به هر ایده</div>
+            </div>
+
+            <!-- Screen 7: Occasions & Important Dates -->
+            <div class="yaad-screen-card" data-screen-cat="occasions" onclick="openLightbox(6)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153453_YAAD_2303c6ac.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153453_YAAD_2303c6ac.jpg';"
+                  alt="مدیریت مناسبت‌ها و تاریخ‌های مهم در اپ یاد"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۷. مناسبت‌ها و تاریخ‌های مهم</div>
+              <div class="screen-caption-desc">فیلتر تب‌بندی تولد و سالگرد ازدواج همراه با شمارش معکوس روزهای مانده تا مناسبت</div>
+            </div>
+
+            <!-- Screen 8: Birthday / Occasion Registration Modal -->
+            <div class="yaad-screen-card" data-screen-cat="occasions" onclick="openLightbox(7)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153634_YAAD_bcf1afb2.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153634_YAAD_bcf1afb2.jpg';"
+                  alt="ثبت تولد و محاسبه خودکار سن در اپلیکیشن یاد"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۸. ثبت تولد و محاسبه سن</div>
+              <div class="screen-caption-desc">ثبت تاریخ تولد و سالگردها به شمسی با قابلیت محاسبه خودکار سن و تنظیم هشدار</div>
+            </div>
+
+            <!-- Screen 9: GPS Location Capture & Camera Attachment -->
+            <div class="yaad-screen-card" data-screen-cat="geofence" onclick="openLightbox(8)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153910_YAAD_e0b666d3.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153910_YAAD_e0b666d3.jpg';"
+                  alt="ثبت موقعیت مکانی GPS و عکاسی از محل"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۹. ثبت مکان GPS و عکس محل</div>
+              <div class="screen-caption-desc">دریافت مختصات دقیق از ماهواره GPS و پیوست عکس زنده با دوربین یا از گالری</div>
+            </div>
+
+            <!-- Screen 10: Geofence Alert Modal -->
+            <div class="yaad-screen-card" data-screen-cat="geofence" onclick="openLightbox(9)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261111_180631_YAAD_dcd7f5bf.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261111_180631_YAAD_dcd7f5bf.jpg';"
+                  alt="هشدار هوشمند خروج از حصار مکانی"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۱۰. هشدار تمام‌صفحه حصار مکانی</div>
+              <div class="screen-caption-desc">اعلان هوشمند ورود/خروج مکانی با کلیدهای عملیاتی توقف، قطع صدا، ویرایش و مسیریابی</div>
+            </div>
+
+            <!-- Screen 11: Quick 4-Action Floating Menu -->
+            <div class="yaad-screen-card" data-screen-cat="timeline" onclick="openLightbox(10)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153427_YAAD_8a7c18b3.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153427_YAAD_8a7c18b3.jpg';"
+                  alt="منوی شناور دسترسی سریع ثبت یادآور، مناسبت، ایده و مکان"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۱۱. منوی دسترسی سریع چهارگانه</div>
+              <div class="screen-caption-desc">ثبت آنی یادآور، مناسبت، ایده و موقعیت مکانی تنها با یک لمس از کلید شناور</div>
+            </div>
+
+            <!-- Screen 12: Splash Screen -->
+            <div class="yaad-screen-card" data-screen-cat="timeline" onclick="openLightbox(11)">
+              <div class="phone-frame">
+                <img
+                  src="public/assets/aistudio/Screenshot_20261110_153354_YAAD_22291eb3.jpg"
+                  onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261110_153354_YAAD_22291eb3.jpg';"
+                  alt="صفحه آغازین اپلیکیشن یاد نسخه 1.2.11"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="screen-caption-title">۱۲. هویت بصری اپ یاد (v1.2.11)</div>
+              <div class="screen-caption-desc">صفحه آغازین رسمی «یاد؛ یادآور آنچه مهم است | YAAD; Reminding What Matters»</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OTHER NARVAN ENGINEERING PRODUCTS & PROJECTS -->
+        <div id="projects" style="padding-top: 16px;">
+          <div class="section-header" style="margin-bottom: 28px;">
+            <div>
+              <span class="section-kicker">پورتفولیو مهندسی نارون</span>
+              <h3 class="section-title" style="font-size: 1.75rem;">سایر سامانه‌ها و محصولات در دست توسعه</h3>
+            </div>
+            <div class="filter-tabs" style="margin-bottom: 0;" role="tablist" aria-label="فیلتر سایر پروژه‌ها">
+              <button type="button" class="filter-tab active" onclick="filterPortfolio('all', this)">همه پروژه‌ها</button>
+              <button type="button" class="filter-tab" onclick="filterPortfolio('iot', this)">اینترنت اشیاء (IoT)</button>
+              <button type="button" class="filter-tab" onclick="filterPortfolio('ai', this)">هوش مصنوعی</button>
+              <button type="button" class="filter-tab" onclick="filterPortfolio('software', this)">نرم‌افزار</button>
+            </div>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="portfolio-card" data-cat="iot">
+              <div>
+                <div class="card-meta-line">سخت‌افزار و اتوماسیون · IoT</div>
+                <h3>کنترلر هوشمند پیامکی و اینترنتی</h3>
+                <div class="portfolio-slogan">فرمان‌پذیری پایدار تجهیزات از راه دور</div>
+                <p>
+                  سامانه سخت‌افزاری مبتنی بر میکروکنترلر و ماژول‌های ارتباطی GSM/SMS برای مدیریت پمپ‌های آب، شیرهای برقی، موتورخانه‌ها و سیستم‌های روشنایی صنعتی بدون وابستگی به اینترنت.
+                </p>
+                <div class="spec-table tabular">
+                  <div class="spec-row">
+                    <span>بستر ارتباطی:</span>
+                    <strong>GSM / SMS / شبکه همراه</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>کاربرد:</span>
+                    <strong>کشاورزی هوشمند و صنایع</strong>
+                  </div>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-outline">سفارش و مشاوره فنی</a>
+            </article>
+
+            <article class="portfolio-card" data-cat="iot ai">
+              <div>
+                <div class="card-meta-line">تله‌متری و پایش محیطی · IoT + AI</div>
+                <h3>پایشگر بلادرنگ سنسورهای صنعتی</h3>
+                <div class="portfolio-slogan">ثبت ۲۴/۷ دما، رطوبت و پارامترهای حیاتی</div>
+                <p>
+                  نودهای سنسور کم‌مصرف جهت پایش پیوسته انبارهای دارویی، گلخانه‌ها و خطوط تولید با قابلیت تشخیص ناهنجاری و ارسال هشدار آنی در صورت عبور از آستانه مجاز.
+                </p>
+                <div class="spec-table tabular">
+                  <div class="spec-row">
+                    <span>سنسورها:</span>
+                    <strong>دما، رطوبت، فشار و سطح</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>امنیت داده:</span>
+                    <strong>پروتکل اختصاصی رمزنگاری‌شده</strong>
+                  </div>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-outline">درخواست دموی فنی</a>
+            </article>
+
+            <article class="portfolio-card" data-cat="software ai iot">
+              <div>
+                <div class="card-meta-line">پلتفرم یکپارچه · نرم‌افزار + IoT</div>
+                <h3>داشبورد مدیریت و تحلیل تله‌متری</h3>
+                <div class="portfolio-slogan">مانیتورینگ متمرکز سخت‌افزارها در وب و موبایل</div>
+                <p>
+                  رابط کاربری گرافیکی تحت وب و موبایل برای تجمیع داده‌های دریافتی از کنترلرها و سنسورهای میدانی، رسم نمودارهای تحلیلی و صدور فرامین کنترلی.
+                </p>
+                <div class="spec-table tabular">
+                  <div class="spec-row">
+                    <span>پلتفرم:</span>
+                    <strong>وب‌اپلیکیشن واکنش‌گرا</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>گزارش‌گیری:</span>
+                    <strong>آمار لحظه‌ای و آرشیو محلی</strong>
+                  </div>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-outline">مشاوره پیاده‌سازی</a>
+            </article>
+
+            <article class="portfolio-card" data-cat="software">
+              <div>
+                <div class="card-meta-line">نرم‌افزار کاربردی · Local-First</div>
+                <h3>اپلیکیشن مالی «برگ»</h3>
+                <div class="portfolio-slogan">حسابداری و بودجه‌بندی شخصی ۱۰۰٪ آفلاین</div>
+                <p>
+                  مدیریت هزینه‌ها، درآمدها و بودجه‌بندی فردی بدون نیاز به اتصال به حساب‌های بانکی یا سرور واسط؛ تمامی گزارش‌های مالی صرفاً در حافظه دستگاه کاربر نگهداری می‌شوند.
+                </p>
+                <div class="spec-table tabular">
+                  <div class="spec-row">
+                    <span>حریم خصوصی:</span>
+                    <strong>کاملاً آفلاین و بدون سرور</strong>
+                  </div>
+                  <div class="spec-row">
+                    <span>وضعیت:</span>
+                    <strong>در حال توسعه توسط تیم نارون</strong>
+                  </div>
+                </div>
+              </div>
+              <a href="#contact" class="btn btn-outline">اطلاع از زمان انتشار</a>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2026 تیم فناوری نارون. تمامی حقوق محفوظ است.</p>
-        <div>
-            <a href="/privacy.html">حریم خصوصی</a>
-        </div>
-    </footer>
+    <!-- 4. BRAND IDENTITY & ARCHITECTURE SECTION -->
+    <section id="architecture" class="section section-subtle">
+      <div class="container">
+        <div class="architecture-banner">
+          <div class="arch-brand-box">
+            <img
+              src="logo-mark.png"
+              alt="نماد درخت و پیکسل گروه فناوری نارون"
+              referrerpolicy="no-referrer"
+            />
+            <strong style="font-size: 1.08rem; color: var(--narvan-teal);">هویت بصری گروه فناوری نارون</strong>
+            <span style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">
+              ریشه در اصالت، شاخسار در فناوری دیجیتال
+            </span>
+          </div>
 
+          <div>
+            <span style="font-size: 0.84rem; font-weight: 800; color: var(--narvan-amber); display: block; margin-bottom: 8px;">
+              معماری و استانداردهای مهندسی ما
+            </span>
+            <h2 style="font-size: clamp(1.55rem, 2.4vw, 2.1rem); font-weight: 900; margin-bottom: 24px; line-height: 1.35;">
+              چرا کسب‌وکارها و کاربران به راهکارهای نارون اعتماد می‌کنند؟
+            </h2>
+            <div class="arch-steps">
+              <div class="arch-step">
+                <h4>۰۱. مالکیت مطلق داده</h4>
+                <p>
+                  در محصولات کاربری ما مانند اپ «یاد»، اطلاعات شخصی، یادآورها و ایده‌های شما هرگز از دستگاهتان خارج نمی‌شود و هیچ وابستگی به سرورهای ابری وجود ندارد.
+                </p>
+              </div>
+              <div class="arch-step">
+                <h4>۰۲. بهینه‌سازی مصرف منابع</h4>
+                <p>
+                  از الگوریتم پایش تطبیقی GPS در موبایل تا کدنویسی سطح پایین میکروکنترلرها، کمترین میزان مصرف باتری و انرژی را هدف قرار می‌دهیم.
+                </p>
+              </div>
+              <div class="arch-step">
+                <h4>۰۳. طراحی شفاف و پایدار</h4>
+                <p>
+                  فاقد هرگونه تبلیغات مزاحم، اسکریپت‌های ردیابی پنهان یا پیچیدگی‌های غیرضروری؛ هر قابلیت دقیقاً برای حل یک مسأله واقعی مهندسی شده است.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT & INQUIRY SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <span class="section-kicker">ارتباط مستقیم با تیم ما</span>
+            <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 12px;">
+              پشتیبانی محصولات و سفارش پروژه‌های مهندسی
+            </h2>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+              برای دریافت راهنمایی درباره اپلیکیشن «یاد»، ارائه پیشنهادات، یا مشاوره جهت طراحی و پیاده‌سازی سامانه‌های نرم‌افزاری، هوش مصنوعی و اینترنت اشیاء (IoT) با ما در ارتباط باشید.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span>ایمیل رسمی پشتیبانی اپلیکیشن‌ها</span>
+                <a href="mailto:narvanapplications@gmail.com" dir="ltr">narvanapplications@gmail.com</a>
+              </li>
+              <li>
+                <span>وب‌سایت رسمی گروه فناوری نارون</span>
+                <a href="https://narvanteam.ir" dir="ltr">https://narvanteam.ir</a>
+              </li>
+              <li>
+                <span>سند شفافیت و حریم خصوصی کاربران</span>
+                <a href="privacy.html">مشاهده سیاست‌نامه حریم خصوصی (فارسی و English) ←</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px; color: var(--text-primary);">
+              ارسال پیام یا درخواست مشاوره
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">
+              فرم زیر را تکمیل کنید تا پیام شما مستقیماً برای واحد فنی گروه فناوری نارون آماده و ارسال شود:
+            </p>
+
+            <form id="narvan-contact-form" onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label for="sender-name">نام و نام خانوادگی یا نام مجموعه</label>
+                <input type="text" id="sender-name" class="form-control" placeholder="مثلاً: علی محمدی" required />
+              </div>
+
+              <div class="form-group">
+                <label for="sender-email">ایمیل یا شماره تماس جهت پاسخگویی</label>
+                <input type="text" id="sender-email" class="form-control" placeholder="example@gmail.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="sender-topic">موضوع پیام</label>
+                <select id="sender-topic" class="form-control">
+                  <option value="پشتیبانی اپلیکیشن یاد (YAAD)">پشتیبانی اپلیکیشن یاد (YAAD)</option>
+                  <option value="سفارش توسعه نرم‌افزار / اپلیکیشن">سفارش توسعه نرم‌افزار و اپلیکیشن</option>
+                  <option value="مشاوره هوش مصنوعی (AI)">مشاوره و پیاده‌سازی هوش مصنوعی (AI)</option>
+                  <option value="پروژه‌های اینترنت اشیاء (IoT) و سخت‌افزار">پروژه‌های اینترنت اشیاء (IoT) و سخت‌افزار</option>
+                  <option value="سایر موارد">سایر موارد</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="sender-message">شرح پیام یا نیازمندی فنی</label>
+                <textarea id="sender-message" rows="4" class="form-control" placeholder="توضیحات خود را بنویسید..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                ثبت و ارسال پیام به تیم نارون
+              </button>
+
+              <div id="contact-status" class="form-status" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FULL-SCREEN SCREENSHOT LIGHTBOX MODAL -->
+  <div id="yaad-lightbox" class="lightbox-backdrop" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" onclick="handleBackdropClick(event)">
+    <div class="lightbox-dialog">
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-img" src="" alt="" referrerpolicy="no-referrer" />
+      </div>
+      <div id="lightbox-title" class="lightbox-title"></div>
+      <div id="lightbox-desc" class="lightbox-desc"></div>
+      <div class="lightbox-controls">
+        <button type="button" class="lightbox-btn" onclick="stepLightbox(-1)">→ تصویر قبلی</button>
+        <button type="button" class="lightbox-btn" onclick="closeLightbox()">✕ بستن</button>
+        <button type="button" class="lightbox-btn" onclick="stepLightbox(1)">تصویر بعدی ←</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. QUIET CORPORATE FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <img
+            src="logo-horizontal.png"
+            alt="گروه فناوری نارون | Narvan Team"
+            referrerpolicy="no-referrer"
+          />
+          <p>
+            گروه فناوری نارون (Narvan Team)؛ پیشگام در مهندسی نرم‌افزارهای محلی و امن، هوش مصنوعی کاربردی و سامانه‌های سخت‌افزاری اینترنت اشیاء (IoT).
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="لینک‌های فوتر">
+          <a href="#services">حوزه‌های تخصصی</a>
+          <a href="#yaad-showcase">اپلیکیشن یاد (YAAD)</a>
+          <a href="#projects">سایر پروژه‌ها</a>
+          <a href="privacy.html" style="color: var(--narvan-teal);">سیاست حریم خصوصی (Privacy Policy)</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom tabular">
+        <span>© ۱۴۰۵ (2026) گروه فناوری نارون (Narvan Team). تمامی حقوق محفوظ است.</span>
+        <span>پشتیبانی: <a href="mailto:narvanapplications@gmail.com" dir="ltr" style="color: var(--narvan-teal); font-weight: 700;">narvanapplications@gmail.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var yaadScreensData = [
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153420_YAAD_527c2556.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153420_YAAD_527c2556.jpg',
+        title: '۱. تایم‌لاین هوشمند روزانه',
+        desc: 'نمایش خط زمان «اکنون»، شمارش معکوس یادآور بعدی و تفکیک یادآورهای انجام‌شده'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153439_YAAD_472ad093.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153439_YAAD_472ad093.jpg',
+        title: '۲. ثبت سریع یادآور و ساعت غلتکی',
+        desc: 'ورودی صوتی، انتخابگر ساعت غلتکی، میانبرهای زمانی (+۵ دقیقه، فردا ۹ صبح) و تاریخ شمسی'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_015405_YAAD_b2ac2bb3.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_015405_YAAD_b2ac2bb3.jpg',
+        title: '۳. رادار قطبی زنده حصار مکانی',
+        desc: 'نمایش زنده جهت و بردار خروج از محدوده مکانی همراه با فاصله لحظه‌ای و مسیریابی'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153804_YAAD_ca3235fe.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153804_YAAD_ca3235fe.jpg',
+        title: '۴. تنظیم شعاع حصار مکانی',
+        desc: 'تعیین شعاع دقیق از ۱۰۰ متر تا ۲۵ کیلومتر و انتخاب شرط هشدار ورود، خروج یا هر دو'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153821_YAAD_4f6892d9.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153821_YAAD_4f6892d9.jpg',
+        title: '۵. ثبت ایده چندرسانه‌ای',
+        desc: 'ثبت متن، تایپ صوتی، صدا، عکس، ویدیو و نقاشی دست‌خط + تنظیم مستقیم یادآور برای ایده'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153838_YAAD_25f076a8.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153838_YAAD_25f076a8.jpg',
+        title: '۶. سازماندهی ایده‌ها و افکار',
+        desc: 'دسته‌بندی ایده‌ها (کاری، خانواده، شخصی) با نمایش زمان یادآور متصل به هر ایده'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153453_YAAD_2303c6ac.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153453_YAAD_2303c6ac.jpg',
+        title: '۷. مناسبت‌ها و تاریخ‌های مهم',
+        desc: 'فیلتر تب‌بندی تولد و سالگرد ازدواج همراه با شمارش معکوس روزهای مانده تا مناسبت'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153634_YAAD_bcf1afb2.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153634_YAAD_bcf1afb2.jpg',
+        title: '۸. ثبت تولد و محاسبه سن',
+        desc: 'ثبت تاریخ تولد و سالگردها به شمسی با قابلیت محاسبه خودکار سن و تنظیم هشدار'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153910_YAAD_e0b666d3.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153910_YAAD_e0b666d3.jpg',
+        title: '۹. ثبت مکان GPS و عکس محل',
+        desc: 'دریافت مختصات دقیق از ماهواره GPS و پیوست عکس زنده با دوربین یا از گالری'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261111_180631_YAAD_dcd7f5bf.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261111_180631_YAAD_dcd7f5bf.jpg',
+        title: '۱۰. هشدار تمام‌صفحه حصار مکانی',
+        desc: 'اعلان هوشمند ورود/خروج مکانی با کلیدهای عملیاتی توقف، قطع صدا، ویرایش و مسیریابی'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153427_YAAD_8a7c18b3.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153427_YAAD_8a7c18b3.jpg',
+        title: '۱۱. منوی دسترسی سریع چهارگانه',
+        desc: 'ثبت آنی یادآور، مناسبت، ایده و موقعیت مکانی تنها با یک لمس از کلید شناور'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261110_153354_YAAD_22291eb3.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261110_153354_YAAD_22291eb3.jpg',
+        title: '۱۲. هویت بصری اپ یاد (v1.2.11)',
+        desc: 'صفحه آغازین رسمی «یاد؛ یادآور آنچه مهم است | YAAD; Reminding What Matters»'
+      }
+    ];
+
+    var currentLightboxIdx = 0;
+
+    function filterYaadScreens(category, btnEl) {
+      var tabs = document.querySelectorAll('.yaad-screen-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+      if (btnEl) {
+        btnEl.classList.add('active');
+      }
+
+      var cards = document.querySelectorAll('.yaad-screen-card');
+      for (var j = 0; j < cards.length; j++) {
+        var card = cards[j];
+        var cat = card.getAttribute('data-screen-cat') || '';
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    }
+
+    function openLightbox(idx) {
+      currentLightboxIdx = idx;
+      renderLightboxSlide();
+      var modal = document.getElementById('yaad-lightbox');
+      if (modal) modal.classList.add('open');
+    }
+
+    function closeLightbox() {
+      var modal = document.getElementById('yaad-lightbox');
+      if (modal) modal.classList.remove('open');
+    }
+
+    function stepLightbox(delta) {
+      currentLightboxIdx = (currentLightboxIdx + delta + yaadScreensData.length) % yaadScreensData.length;
+      renderLightboxSlide();
+    }
+
+    function renderLightboxSlide() {
+      var item = yaadScreensData[currentLightboxIdx];
+      if (!item) return;
+      var imgEl = document.getElementById('lightbox-img');
+      var titleEl = document.getElementById('lightbox-title');
+      var descEl = document.getElementById('lightbox-desc');
+      if (imgEl) {
+        imgEl.onerror = function() {
+          this.onerror = null;
+          this.src = item.fallback;
+        };
+        imgEl.src = item.src;
+        imgEl.alt = item.title;
+      }
+      if (titleEl) titleEl.textContent = item.title;
+      if (descEl) descEl.textContent = item.desc;
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target && e.target.id === 'yaad-lightbox') {
+        closeLightbox();
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      var modal = document.getElementById('yaad-lightbox');
+      if (!modal || !modal.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') stepLightbox(1);
+      if (e.key === 'ArrowRight') stepLightbox(-1);
+    });
+
+    function filterPortfolio(category, btnEl) {
+      var tabs = document.querySelectorAll('.filter-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+      if (btnEl) {
+        btnEl.classList.add('active');
+      }
+
+      var cards = document.querySelectorAll('.portfolio-card');
+      for (var j = 0; j < cards.length; j++) {
+        var card = cards[j];
+        var cats = card.getAttribute('data-cat') || '';
+        if (category === 'all' || cats.indexOf(category) !== -1) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      var name = document.getElementById('sender-name').value.trim();
+      var contact = document.getElementById('sender-email').value.trim();
+      var topic = document.getElementById('sender-topic').value;
+      var msg = document.getElementById('sender-message').value.trim();
+      var statusEl = document.getElementById('contact-status');
+
+      if (!name || !contact || !msg) return;
+
+      var subject = encodeURIComponent(topic + ' - ' + name);
+      var body = encodeURIComponent(
+        'نام: ' + name + '\n' +
+        'راه ارتباطی: ' + contact + '\n' +
+        'موضوع: ' + topic + '\n\n' +
+        'پیام:\n' + msg
+      );
+
+      statusEl.className = 'form-status success';
+      statusEl.innerHTML = 'پیام شما آماده شد. در صورت عدم باز شدن خودکار نرم‌افزار ایمیل، از طریق <a href="mailto:narvanapplications@gmail.com?subject=' + subject + '&body=' + body + '" style="text-decoration:underline;">این لینک مستقیم</a> ارسال نمایید.';
+
+      window.location.href = 'mailto:narvanapplications@gmail.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
 </body>
 </html>

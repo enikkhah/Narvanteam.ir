@@ -1,123 +1,805 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سیاست حریم خصوصی | تیم فناوری نارون</title>
-    <style>
-        :root {
-            --primary-green: #10B981;
-            --accent-amber: #F3A332;
-            --bg-light: #F9FAFB;
-            --text-dark: #1F2937;
-            --text-gray: #4B5563;
-        }
-        body {
-            font-family: Tahoma, 'Segoe UI', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            line-height: 1.8;
-        }
-        header {
-            background-color: white;
-            padding: 1rem 5%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-container img {
-            max-width: 120px;
-            height: auto;
-        }
-        .privacy-container {
-            max-width: 800px;
-            margin: 3rem auto;
-            padding: 2rem 5%;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-green);
-        }
-        h1 {
-            color: var(--primary-green);
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        h2 {
-            color: var(--accent-amber);
-            font-size: 1.3rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-        p, li {
-            color: var(--text-gray);
-            font-size: 1rem;
-        }
-        ul {
-            padding-right: 1.5rem;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--text-dark);
-            color: white;
-            margin-top: 3rem;
-        }
-        footer a {
-            color: var(--primary-green);
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            color: var(--primary-green);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            color: var(--accent-amber);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سیاست حریم خصوصی اپ یاد (YAAD) و گروه فناوری نارون | Narvan Team Privacy Policy</title>
+  <meta name="description" content="سند رسمی حریم خصوصی اپلیکیشن یاد (YAAD) و راهکارهای نرم‌افزاری، هوش مصنوعی و اینترنت اشیاء (IoT) گروه فناوری نارون (Narvan Team) به دو زبان فارسی و انگلیسی." />
+  <meta property="og:title" content="سیاست حریم خصوصی اپ یاد و گروه فناوری نارون | Privacy Policy" />
+  <meta property="og:description" content="ذخیره‌سازی ۱۰۰٪ محلی در حافظه دستگاه، پشتیبان‌گیری خودکار در پوشه YAAD، مدیریت هوشمند و کم‌مصرف GPS و حفاظت کامل از حریم خصوصی کاربران." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="logo-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* 60% Dominant Neutral Canvas (Google Enterprise Style) */
+      --bg-canvas: #FFFFFF;
+      --bg-subtle: #F8FAFC;
+      --bg-sage: #F3F8F5;
+
+      /* 30% Structural Surfaces & Typography */
+      --surface: #FFFFFF;
+      --text-primary: #0F172A;
+      --text-secondary: #334155;
+      --text-muted: #64748B;
+      --border-hairline: #E2E8F0;
+      --border-strong: #CBD5E1;
+
+      /* 10% Brand & Complementary Colors (From Narvan Logos & YAAD App) */
+      --narvan-teal: #0D4A42;
+      --narvan-teal-dark: #072F29;
+      --narvan-teal-soft: #E6F2F0;
+
+      --narvan-green: #519E47;
+      --narvan-green-dark: #3D7D35;
+      --narvan-green-soft: #ECF6EA;
+
+      --narvan-amber: #EEA125;
+      --narvan-amber-dark: #B87109;
+      --narvan-amber-soft: #FEF6E6;
+
+      --yaad-orange: #FF8C00;
+      --yaad-orange-dark: #D97706;
+      --yaad-orange-soft: #FFF4E5;
+
+      --comp-indigo: #1D4ED8;
+      --comp-indigo-soft: #EFF6FF;
+
+      --shadow-card: 0 4px 20px -2px rgba(13, 74, 66, 0.05);
+      --radius-lg: 20px;
+      --radius-md: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Vazirmatn', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-subtle);
+      color: var(--text-primary);
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    code {
+      background: var(--narvan-teal-soft);
+      color: var(--narvan-teal);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       TOP NAVIGATION BAR (Strict 3-Zone Contract)
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      height: 76px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .brand-logo-horizontal {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--narvan-teal);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 9px 20px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-outline {
+      background: var(--surface);
+      color: var(--narvan-teal);
+      border-color: var(--border-strong);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--narvan-teal);
+      background: var(--narvan-teal-soft);
+    }
+
+    .btn-primary {
+      background: var(--narvan-teal);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background: var(--narvan-teal-dark);
+    }
+
+    /* ==========================================================================
+       HERO BANNER & QUICK SECTION / LANGUAGE JUMP
+       ========================================================================== */
+    .privacy-hero {
+      background: radial-gradient(circle at 15% 20%, var(--narvan-green-soft) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 80%, var(--yaad-orange-soft) 0%, transparent 45%),
+                  var(--bg-canvas);
+      border-bottom: 1px solid var(--border-hairline);
+      padding: 56px 0 44px;
+    }
+
+    .hero-brand-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .app-icon-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--yaad-orange-soft);
+      border: 1px solid rgba(255, 140, 0, 0.3);
+      padding: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .narvan-icon-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--narvan-green-soft);
+      border: 1px solid rgba(81, 158, 71, 0.3);
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .privacy-hero h1 {
+      font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 12px;
+      text-wrap: balance;
+    }
+
+    .privacy-hero h1 .yaad-highlight {
+      color: var(--yaad-orange);
+    }
+
+    .privacy-hero h1 .narvan-highlight {
+      color: var(--narvan-teal);
+    }
+
+    .meta-line {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    /* Summary Callout Box */
+    .summary-callout {
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 28px;
+    }
+
+    .summary-callout p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.9;
+    }
+
+    .jump-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ==========================================================================
+       POLICY SECTIONS
+       ========================================================================== */
+    .policy-main {
+      padding: 48px 0 72px;
+    }
+
+    .policy-grid-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .highlight-card {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .highlight-card strong {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--narvan-teal);
+      margin-bottom: 8px;
+    }
+
+    .highlight-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .policy-card {
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .policy-card h2 {
+      font-size: 1.28rem;
+      font-weight: 800;
+      color: var(--narvan-teal);
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .policy-card p {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+
+    .policy-card ul {
+      padding-right: 22px;
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+    }
+
+    .policy-card li {
+      margin-bottom: 10px;
+      line-height: 1.85;
+    }
+
+    .policy-card li strong {
+      color: var(--text-primary);
+    }
+
+    /* Narvan Broader Engineering Privacy Banner */
+    .narvan-scope-card {
+      background: linear-gradient(135deg, #FFFFFF 0%, var(--bg-sage) 100%);
+      border: 1px solid #BBF7D0;
+    }
+
+    /* ==========================================================================
+       COMPLETE ENGLISH PRIVACY POLICY SECTION (LTR)
+       ========================================================================== */
+    .english-section {
+      direction: ltr;
+      text-align: left;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 24px;
+      padding: 44px 40px;
+      margin-top: 48px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .english-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .english-header h2 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--narvan-teal);
+    }
+
+    .english-block {
+      margin-bottom: 26px;
+    }
+
+    .english-block h3 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .english-block p,
+    .english-block li {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    .english-block ul {
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    .english-block li {
+      margin-bottom: 8px;
+    }
+
+    .english-summary-box {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-hairline);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    footer {
+      background: var(--bg-canvas);
+      border-top: 1px solid var(--border-hairline);
+      padding: 44px 0 32px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .policy-grid-highlights {
+        grid-template-columns: 1fr;
+      }
+      .policy-card,
+      .english-section {
+        padding: 26px 22px;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <a href="/index.html">
-                <img src="logo.svg" alt="لوگو تیم فناوری نارون" onerror="this.src='logo.png'; this.onerror=null;">
-            </a>
+  <!-- TOP NAVIGATION BAR (3-Zone Contract) -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="گروه فناوری نارون - بازگشت به صفحه اصلی">
+        <img
+          src="logo-horizontal.png"
+          alt="گروه فناوری نارون | Narvan Team"
+          class="brand-logo-horizontal"
+          referrerpolicy="no-referrer"
+        />
+      </a>
+
+      <nav class="nav-links" aria-label="دسترسی سریع در صفحه حریم خصوصی">
+        <a href="#yaad-policy">حریم خصوصی اپ یاد</a>
+        <a href="#permissions">مجوزها و GPS</a>
+        <a href="#narvan-iot-ai">پروژه‌های هوش مصنوعی و IoT</a>
+        <a href="#english-policy" dir="ltr">English Policy</a>
+      </nav>
+
+      <a href="index.html" class="btn btn-outline">بازگشت به صفحه اصلی ←</a>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="privacy-hero">
+    <div class="container">
+      <div class="hero-brand-row">
+        <div class="app-icon-badge" title="اپلیکیشن یاد (YAAD)">
+          <img src="yaad-logo.svg" alt="لوگو اپلیکیشن یاد" referrerpolicy="no-referrer" />
         </div>
-        <nav>
-            <span style="color: var(--text-gray); font-weight: bold;">تیم فناوری نارون</span>
-        </nav>
-    </header>
+        <div class="narvan-icon-badge" title="گروه فناوری نارون (Narvan Team)">
+          <img src="logo-mark.png" alt="نشان گروه فناوری نارون" referrerpolicy="no-referrer" />
+        </div>
+      </div>
 
-    <div class="privacy-container">
-        <a href="/index.html" class="back-link">← بازگشت به صفحه اصلی</a>
-        
-        <h1>سیاست حریم خصوصی</h1>
-        <p>آخرین به‌روزرسانی: پاییز ۱۴۰۵</p>
+      <h1>
+        سیاست حریم خصوصی اپ «<span class="yaad-highlight">یاد</span>» (YAAD) و <span class="narvan-highlight">گروه فناوری نارون</span>
+      </h1>
+      <p class="meta-line">
+        توسعه‌دهنده: گروه فناوری نارون (Narvan Team) · آخرین به‌روزرسانی: <span id="last-updated-date">آبان ۱۴۰۵ (November 2026)</span>
+      </p>
 
-        <p><strong>تیم فناوری نارون</strong> (توسعه‌دهنده اپلیکیشن <strong>«یاد»</strong> و راهکارهای هوش مصنوعی و اینترنت اشیاء) احترام به حریم خصوصی کاربران را از اولویت‌های اصلی خود می‌داند. این سند توضیح می‌دهد که محصولات نرم‌افزاری و سخت‌افزاری ما چگونه با اطلاعات شما رفتار می‌کنند.</p>
+      <div class="summary-callout">
+        <p>
+          اپلیکیشن «<strong style="color: var(--yaad-orange);">یاد</strong>» (YAAD) محصول <strong>گروه فناوری نارون (Narvan Team)</strong>، یک دستیار هوشمند مدیریت زمان، یادآورهای گفتاری، ثبت ایده با قابلیت زمان‌بندی یادآور، مناسبت‌ها و یادآور مکان‌محور (Geofence) است. اصل بنیادین ما در تمامی محصولات نرم‌افزاری، هوش مصنوعی و اینترنت اشیاء (IoT)، حفظ کامل محرمانگی و مالکیت اطلاعات شماست: <strong>در اپلیکیشن یاد تمامی اطلاعات شما ۱۰۰٪ در حافظه داخلی گوشی خودتان ذخیره می‌شود، قابلیت پشتیبان‌گیری ابری به‌طور کامل از برنامه حذف شده است و هیچ داده‌ای به سرورهای خارجی ارسال یا فروخته نمی‌شود.</strong> استفاده از برنامه نیازی به ثبت‌نام یا ایجاد حساب کاربری ندارد.
+        </p>
+      </div>
 
-        <h2>۱. جمع‌آوری و ذخیره‌سازی داده‌ها (رویکرد ذخیره محلی)</h2>
-        <p>در اپلیکیشن «یاد؛ یادآور آنچه مهم است»، تمامی داده‌های شما اعم از متن یادآورها، زمان‌بندی‌ها و تنظیمات شخصی، <strong>صرفاً در حافظه داخلی دستگاه (گوشی موبایل شما) ذخیره می‌شوند</strong>. تیم نارون هیچ‌گونه اطلاعات شخصی یا محتوای یادداشت‌های شما را به سرورهای خارجی منتقل، جمع‌آوری یا پردازش نمی‌کند.</p>
+      <div class="jump-bar">
+        <a href="#yaad-policy" class="btn btn-primary">مطالعه متن کامل فارسی</a>
+        <a href="#narvan-iot-ai" class="btn btn-outline">بخش هوش مصنوعی و IoT نارون</a>
+        <a href="#english-policy" class="btn btn-outline" dir="ltr">Read English Privacy Policy</a>
+      </div>
+    </div>
+  </section>
 
-        <h2>۲. دسترسی‌های اپلیکیشن (Permissions)</h2>
-        <p>اپلیکیشن ما تنها دسترسی‌هایی را درخواست می‌کند که برای عملکرد صحیح نرم‌افزار ضروری است:</p>
+  <!-- MAIN PRIVACY CONTENT -->
+  <main class="container policy-main" id="yaad-policy">
+
+    <!-- 3 Key Pillars -->
+    <div class="policy-grid-highlights">
+      <div class="highlight-card">
+        <strong>۱. ذخیره‌سازی ۱۰۰٪ محلی روی دستگاه</strong>
+        <p>
+          تمامی یادآورها، ایده‌ها، یادداشت‌های صوتی/ویدیویی و مکان‌های حصار مکانی منحصراً در حافظه داخلی گوشی شما نگهداری می‌شوند.
+        </p>
+      </div>
+      <div class="highlight-card">
+        <strong>۲. پشتیبان خودکار در پوشه YAAD</strong>
+        <p>
+          سرویس‌های ابری به‌طور کامل حذف شده‌اند؛ پشتیبان‌گیری و بازیابی به‌صورت خودکار در پوشه <code>YAAD</code> در ریشه حافظه دستگاه انجام می‌گیرد.
+        </p>
+      </div>
+      <div class="highlight-card">
+        <strong>۳. بدون سرور واسط و بدون تبلیغات</strong>
+        <p>
+          هیچ داده‌ای به سرورهای گروه فناوری نارون یا اشخاص ثالث ارسال نمی‌شود و برنامه کاملاً فاقد تبلیغات یا ردیاب‌های تجاری است.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <article class="policy-card">
+      <h2>۱. چه اطلاعاتی در اپ «یاد» ثبت و در حافظه دستگاه ذخیره می‌شود؟</h2>
+      <p>
+        تمامی اطلاعاتی که در برنامه وارد می‌کنید، صرفاً در حافظه داخلی دستگاه شما (<code>LocalStorage</code> و <code>IndexedDB</code>) نگهداری می‌شود:
+      </p>
+      <ul>
+        <li>
+          <strong>یادآورها و مناسبت‌ها:</strong> عنوان، توضیحات، دسته‌بندی (کاری، خانوادگی، سایر)، اولویت، تاریخ و ساعت (شمسی و میلادی)، الگوی تکرار و تصاویر پیوست‌شده.
+        </li>
+        <li>
+          <strong>ایده‌ها و یادآورهای متصل به ایده:</strong> متن ایده، یادداشت صوتی ضبط‌شده (Voice Memo)، ویدیوی کوتاه، نقاشی دست‌خط و همچنین یادآورهایی که مستقیماً از طریق منوی بازشو پایین بخش ایده‌ها (با ساعت غلتکی، تاریخ، اولویت و تکرار) برای هر ایده تنظیم می‌کنید.
+        </li>
+        <li>
+          <strong>مکان‌های ثبت‌شده و حصار مکانی (Geofence):</strong> مختصات جغرافیایی (طول و عرض جغرافیایی GPS)، عنوان، آدرس، شعاع محدوده ورود/خروج و عکس مکان.
+        </li>
+        <li>
+          <strong>تنظیمات شخصی‌سازی برنامه:</strong> زبان برنامه، تم ظاهری، اندازه فونت (با سایز استاندارد پیش‌فرض ۱۶)، نوع صوت زنگ هشدار، سرعت خوانش صوتی و وضعیت لرزش (ویبره).
+        </li>
+      </ul>
+    </article>
+
+    <!-- Section 2 -->
+    <article class="policy-card">
+      <h2>۲. پشتیبان‌گیری کاملاً خودکار محلی در پوشه <code>YAAD</code> و حذف فضای ابری</h2>
+      <ul>
+        <li>
+          <strong>حذف کامل پشتیبان‌گیری ابری:</strong> تمامی سرویس‌های پشتیبان‌گیری ابری و بخش‌های دستی غیرضروری حذف شده‌اند تا فایل‌های پشتیبان شما هرگز از دستگاهتان خارج نشوند.
+        </li>
+        <li>
+          <strong>پشتیبان‌گیری خودکار و بی‌وقفه در ریشه حافظه (پوشه <code>YAAD</code>):</strong> برنامه برای محافظت کامل از اطلاعات شما در برابر بسته شدن، به‌روزرسانی یا نصب مجدد، به‌صورت کاملاً خودکار پس از هر تغییر و در زمان بسته شدن اپ، یک نسخه پشتیبان در <strong>ریشه حافظه داخلی دستگاه در پوشه <code>YAAD</code></strong> ذخیره کرده و در هنگام باز شدن برنامه به‌طور خودکار آن را بررسی و بازیابی می‌کند.
+        </li>
+      </ul>
+    </article>
+
+    <!-- Section 3 -->
+    <article class="policy-card">
+      <h2>۳. سازوکار اعلان‌ها، تفکیک هوشمند صدا و تعویق خودکار</h2>
+      <ul>
+        <li>
+          <strong>عدم تداخل صوتی در زمان باز بودن برنامه:</strong> هنگامی که داخل برنامه هستید، اعلان‌های دیداری به‌صورت عادی نمایش داده می‌شوند اما صدای زنگ هشدار صرفاً توسط اعلان خارج از اپ (سیستم نوتیفیکیشن اندروید) پخش می‌شود تا از پخش هم‌زمان دو صدا با تأخیر زمانی جلوگیری شود.
+        </li>
+        <li>
+          <strong>تنظیم صدا با ولوم نوتیفیکیشن گوشی:</strong> حجم صدای آلارم‌های صوتی مستقیماً از <strong>ولوم نوتیفیکیشن (Notification Volume) گوشی</strong> پیروی می‌کند و پیش‌نمایش صداهای زنگ نیز در بخش تنظیمات اپ در دسترس است.
+        </li>
+        <li>
+          <strong>ساختار شفاف اعلان خارج از اپ:</strong> اعلان صادرشده در نوار اعلان اندروید با یک لوگوی رسمی اپ، یک زمان واحد و نمایش متمایز موضوع یادآور به همراه سه کلید عملیاتی <strong>«✓ انجام شد»</strong>، <strong>«⏱ تعویق ۱۵ دقیقه»</strong> و <strong>«✎ ویرایش»</strong> نمایش داده می‌شود.
+        </li>
+        <li>
+          <strong>کلیک روی بدنه اعلان و رفتار پس از ۱ دقیقه بی‌پاسخ ماندن:</strong> با لمس بدنه اعلان، برنامه مستقیماً <strong>صفحه تایم‌لاین یادآورها</strong> را باز می‌کند. اگر اعلان به مدت ۱ دقیقه بی‌پاسخ بماند، صدای زنگ متوقف شده، اعلان در صدر منوی کرکره‌ای باقی می‌ماند و یادآور به زمان ۱۵ دقیقه بعد در تایم‌لاین منتقل می‌شود.
+        </li>
+      </ul>
+    </article>
+
+    <!-- Section 4 -->
+    <article class="policy-card" id="permissions">
+      <h2>۴. مجوزهای دستگاه (Permissions) و مدیریت هوشمند و کم‌مصرف GPS</h2>
+      <p>
+        برنامه تنها در زمان استفاده شما از قابلیت‌های مرتبط، مجوزهای زیر را در سیستم‌عامل اندروید یا مرورگر درخواست می‌کند:
+      </p>
+      <ul>
+        <li>
+          <strong>اعلان‌ها، زنگ هشدار دقیق و راه‌اندازی مجدد (Notifications, Exact Alarm, Full-Screen Intent, Vibrate &amp; Boot Completed):</strong> برای نمایش به‌موقع یادآورها در صدر منوی کرکره‌ای، پخش صدای هشدار، لرزش و بازنشانی زنگ‌های زمان‌بندی‌شده پس از ری‌استارت شدن گوشی.
+        </li>
+        <li>
+          <strong>موقعیت مکانی هوشمند و غیردائمی (Adaptive GPS Location):</strong> موقعیت مکانی (GPS) در برنامه <strong>به‌صورت مداوم روشن نیست</strong>؛ بلکه صرفاً زمانی فعال می‌شود که هم رادار حصار مکانی روشن باشد و هم حداقل یک یادآور یا مکان فعال دارای حصار مکانی ثبت شده باشد. در این حالت نیز از الگوریتم پایش تطبیقی (Adaptive Polling از ۱۵ ثانیه در نزدیکی مقصد تا ۵ دقیقه در فواصل دور) برای حداقل مصرف باتری و حفظ حریم خصوصی استفاده می‌شود.
+        </li>
+        <li>
+          <strong>میکروفون (Microphone / Record Audio):</strong> صرفاً هنگام استفاده از تایپ صوتی (تبدیل گفتار به متن) یا ضبط یادداشت صوتی در بخش ایده‌ها.
+        </li>
+        <li>
+          <strong>دوربین (Camera):</strong> صرفاً هنگام عکس‌برداری مستقیم برای پیوست به یادآورها و مکان‌ها، یا ضبط ویدیوی کوتاه در بخش ایده‌ها.
+        </li>
+        <li>
+          <strong>پوشه و حافظه (Storage / All Files Access):</strong> صرفاً برای ایجاد و به‌روزرسانی خودکار پوشه پشتیبان <code>YAAD</code> در ریشه حافظه دستگاه و ذخیره پیوست‌ها.
+        </li>
+      </ul>
+      <p style="margin-bottom: 0;">
+        تمامی این مجوزها در کنترل کامل شما هستند و هر زمان بخواهید می‌توانید آن‌ها را از بخش تنظیمات گوشی مدیریت یا لغو کنید.
+      </p>
+    </article>
+
+    <!-- Section 5 -->
+    <article class="policy-card">
+      <h2>۵. اطلاعاتی که هرگز جمع‌آوری نمی‌کنیم</h2>
+      <ul>
+        <li>
+          ما به محتوای یادآورها، ایده‌ها، عکس‌ها، صداها، مخاطبین، پیامک‌ها یا مکان‌های ثبت‌شده شما هیچ‌گونه دسترسی نداریم و هیچ داده‌ای به سرورهای گروه فناوری نارون ارسال نمی‌شود.
+        </li>
+        <li>
+          برنامه هیچ کلید اختصاصی Google Maps API از کاربر دریافت یا ذخیره نمی‌کند.
+        </li>
+        <li>
+          اپلیکیشن کاملاً فاقد تبلیغات، اسکریپت‌های ردیابی تبلیغاتی و فروش داده به اشخاص ثالث است.
+        </li>
+      </ul>
+    </article>
+
+    <!-- Section 6 -->
+    <article class="policy-card">
+      <h2>۶. سرویس‌های بیرونی و همگام‌سازی اختیاری</h2>
+      <ul>
+        <li>
+          <strong>نمایش نقشه و آدرس‌یابی (OpenStreetMap / Nominatim و مسیریاب‌ها):</strong> صرفاً هنگام مشاهده نقشه، تبدیل مختصات جغرافیایی به نام آدرس یا باز کردن مسیریاب استفاده می‌شود.
+        </li>
+        <li>
+          <strong>موتور تشخیص گفتار سیستم‌عامل/مرورگر (Speech Recognition):</strong> صرفاً در زمان فشردن دکمه میکروفون برای تبدیل گفتار شما به متن استفاده می‌شود.
+        </li>
+        <li>
+          <strong>تقویم گوگل (Google Calendar — کاملاً اختیاری):</strong> تنها در صورتی که خودتان در بخش «همگام‌سازی و سرویس‌ها» گزینه ورود با گوگل را انتخاب کنید، یادآورها با تقویم گوگل شخصی شما همگام‌سازی می‌شوند.
+        </li>
+      </ul>
+    </article>
+
+    <!-- Section 7 -->
+    <article class="policy-card">
+      <h2>۷. کنترل، آمار عملکرد، سطل بازیافت و حذف کامل اطلاعات</h2>
+      <p style="margin-bottom: 0;">
+        شما مالک کامل داده‌های خود هستید. آمار عملکرد یادآورها کاملاً به‌صورت محلی روی دستگاه محاسبه می‌شود. هر یادآور، مناسبت، مکان یا ایده حذف‌شده به بخش «سطل بازیافت» داخل برنامه منتقل می‌شود تا در صورت نیاز قابل بازیابی باشد یا به‌صورت دائمی حذف گردد. برای پاک کردن کامل همه اطلاعات، کافی است سطل بازیافت را خالی کرده، از بخش تنظیمات گوشی گزینه «پاک کردن داده‌ها» (Clear Data) را بزنید و پوشه <code>YAAD</code> را از ریشه حافظه دستگاه حذف نمایید.
+      </p>
+    </article>
+
+    <!-- Section 8: Narvan Team Broader Engineering Scope (Software, AI & IoT) -->
+    <article class="policy-card narvan-scope-card" id="narvan-iot-ai">
+      <h2>۸. حریم خصوصی در پروژه‌های هوش مصنوعی، نرم‌افزار و اینترنت اشیاء (IoT) گروه فناوری نارون</h2>
+      <p>
+        علاوه بر اپلیکیشن «یاد»، <strong>گروه فناوری نارون (Narvan Team)</strong> در سه حوزه مهندسی نرم‌افزار، هوش مصنوعی و سخت‌افزارهای اینترنت اشیاء فعالیت می‌کند و در تمامی این حوزه‌ها اصول امنیتی زیر را تضمین می‌نماید:
+      </p>
+      <ul>
+        <li>
+          <strong>نرم‌افزارها و اپلیکیشن‌های کاربردی (نظیر اپ «یاد» و اپ مالی «برگ»):</strong> مبتنی بر معماری Local-First طراحی می‌شوند تا اطلاعات حساس و روزمره کاربران بدون نیاز به سرور واسط در دستگاه خود کاربر باقی بماند.
+        </li>
+        <li>
+          <strong>سامانه‌های هوش مصنوعی و پردازش لبه (Edge &amp; On-Device AI):</strong> در پیاده‌سازی مدل‌های پردازش زبان طبیعی، دسته‌بندی داده‌ها و اتوماسیون هوشمند کسب‌وکارها، پردازش‌ها به شکل محلی یا در زیرساخت اختصاصی کارفرما انجام شده و داده‌های سازمانی هرگز برای آموزش مدل‌های عمومی ثالث ارسال نمی‌گردند.
+        </li>
+        <li>
+          <strong>سخت‌افزارهای تعبیه‌شده و اینترنت اشیاء (IoT &amp; GSM Controllers):</strong> در کنترلرهای هوشمند پیامکی/اینترنتی و پایشگرهای سنسورهای صنعتی، تمامی فرامین کنترلی و داده‌های تله‌متری مستقیماً میان سخت‌افزار مستقر و داشبورد یا شماره مجاز مالک سامانه مبادله می‌شود و تیم نارون هیچ‌گونه دسترسی یا بهره‌برداری ثالثی از داده‌های عملیاتی تجهیزات ندارد.
+        </li>
+      </ul>
+    </article>
+
+    <!-- Section 9: Contact Info -->
+    <article class="policy-card">
+      <h2>۹. توسعه‌دهنده و راه‌های ارتباط با پشتیبانی</h2>
+      <p>
+        اپلیکیشن «یاد» و راهکارهای معرفی‌شده در این وب‌سایت توسط <strong>گروه فناوری نارون (Narvan Team)</strong> طراحی و توسعه یافته‌اند. برای هرگونه پرسش، پیشنهاد یا راهنمایی مرتبط با حریم خصوصی و پشتیبانی، از راه‌های زیر با ما در ارتباط باشید:
+      </p>
+      <ul>
+        <li><strong>توسعه‌دهنده:</strong> گروه فناوری نارون (Narvan Team / Narvan Software Team)</li>
+        <li><strong>ایمیل رسمی پشتیبانی:</strong> <a href="mailto:narvanapplications@gmail.com" dir="ltr" style="color: var(--narvan-teal); font-weight: 800;">narvanapplications@gmail.com</a></li>
+        <li><strong>وب‌سایت رسمی:</strong> <a href="https://narvanteam.ir" target="_blank" rel="noopener noreferrer" dir="ltr" style="color: var(--narvan-teal); font-weight: 800;">https://narvanteam.ir</a></li>
+      </ul>
+    </article>
+
+    <!-- ========================================================================
+         COMPLETE ENGLISH PRIVACY POLICY SECTION (LTR)
+         ======================================================================== -->
+    <section class="english-section" id="english-policy" lang="en" dir="ltr">
+      <div class="english-header">
+        <div>
+          <span style="font-size: 0.82rem; font-weight: 700; color: var(--narvan-green-dark); display: block; margin-bottom: 4px;">
+            OFFICIAL ENGLISH PRIVACY POLICY &amp; DATA PROTECTION STATEMENT
+          </span>
+          <h2>Privacy Policy — YAAD Reminder &amp; Narvan Team</h2>
+        </div>
+        <img src="logo-horizontal.png" alt="Narvan Team Logo" style="height: 38px; width: auto;" referrerpolicy="no-referrer" />
+      </div>
+
+      <div class="english-summary-box">
+        <strong>Executive Summary:</strong><br />
+        <strong>YAAD Reminder</strong>, developed by <strong>Narvan Team (Narvan Software Team)</strong>, stores 100% of your reminders, occasions, ideas (including text, voice memos, short videos, sketches, and reminders scheduled directly via the Idea expandable reminder menu), and saved Geofence locations locally on your device. Cloud backup services have been completely removed; automatic backup and restore operate seamlessly in the background inside your device's root <code>YAAD</code> folder. When the app is open, visual alerts are shown in-app while audio rings exclusively via the system's out-of-app notification channel to prevent audio lag or echo. GPS location for Geofencing is never kept continuously active—it runs using an adaptive, battery-saving polling interval (15s to 5m) strictly when the Geofence radar is enabled and active geofences exist. Google Calendar sync is 100% optional. We never collect, track, or sell your personal data, and there are no ads.
+      </div>
+
+      <div class="english-block">
+        <h3>1. Local-Only Data Storage (On-Device Architecture)</h3>
+        <p>
+          All information you create or manage in YAAD is stored exclusively in your device's local storage (<code>LocalStorage</code> and <code>IndexedDB</code>). No account registration, phone number, or email is required to use the application:
+        </p>
         <ul>
-            <li><strong>ارسال اعلان (Notifications):</strong> صرفاً جهت نمایش هشدارها و یادآورهای تنظیم‌شده توسط خود شما در زمان مقرر.</li>
-            <li><strong>موقعیت مکانی (در صورت فعال‌سازی ویژگی ژئوفنسینگ):</strong> برای یادآورهای مبتنی بر مکان در دستگاه شما پردازش می‌شود.</li>
-            <li>ما هیچ‌گونه دسترسی غیرمجاز به مخاطبین، گالری تصاویر، پیامک‌ها یا سایر اطلاعات حساس دستگاه شما نداریم.</li>
+          <li><strong>Reminders &amp; Occasions:</strong> Titles, notes, categories (Work, Family, Other), priority levels, Jalali/Gregorian dates and times, recurrence rules, and attached photos.</li>
+          <li><strong>Ideas &amp; Idea-Linked Reminders:</strong> Text notes, recorded voice memos, short video clips, handwritten sketches, and reminders scheduled directly through the expandable bottom reminder menu in the Ideas section (with wheel time picker, date, priority, and repeat rules).</li>
+          <li><strong>Saved Locations &amp; Geofences:</strong> GPS coordinates (latitude/longitude), location titles, addresses, entry/exit radius, and attached location images.</li>
+          <li><strong>App Preferences:</strong> Interface language, theme mode, font size (default 16px), alarm ringtone selection, speech rate, and vibration settings.</li>
         </ul>
+      </div>
 
-        <h2>۳. اشتراک‌گذاری اطلاعات با شخص ثالث</h2>
-        <p>با توجه به اینکه داده‌های حساس شما به هیچ سروری منتقل نمی‌شود، هیچ اطلاعاتی از شما با اشخاص ثالث، شرکت‌های تبلیغاتی یا نهادهای دیگر به اشتراک گذاشته نخواهد شد. حریم خصوصی شما کاملاً محفوظ است.</p>
+      <div class="english-block">
+        <h3>2. Automatic Local Backup in the Root <code>YAAD</code> Folder &amp; Zero Cloud Storage</h3>
+        <ul>
+          <li><strong>Complete Removal of Cloud Backups:</strong> All cloud backup integrations have been permanently removed to ensure your backup files never leave your physical device.</li>
+          <li><strong>Seamless Automatic Local Backup:</strong> To safeguard your data against accidental closure, OS updates, or reinstallation, the app automatically writes and updates a local backup inside the root <code>YAAD</code> folder on your device's internal storage after every change and upon app exit, automatically verifying and restoring it when launched.</li>
+        </ul>
+      </div>
 
-        <h2>۴. پردازش در پروژه‌های هوش مصنوعی و اینترنت اشیاء (IoT)</h2>
-        <p>در صورتی که از سیستم‌های اتوماسیون مبتنی بر اینترنت
-          
+      <div class="english-block">
+        <h3>3. Smart Notification System, Audio Separation &amp; Auto-Snooze</h3>
+        <ul>
+          <li><strong>Echo-Free Audio Separation:</strong> While you are actively viewing the app, visual reminder alerts appear in-app, whereas the alarm sound plays exclusively through the Android system notification channel to eliminate dual-audio echo or latency.</li>
+          <li><strong>Notification Volume Control:</strong> Alarm volume directly follows your phone's system <strong>Notification Volume</strong>.</li>
+          <li><strong>Actionable Out-of-App Notifications:</strong> System notifications display the official app icon, a unified timestamp, the reminder title, and three quick-action buttons: <strong>Done (✓)</strong>, <strong>Snooze 15m (⏱)</strong>, and <strong>Edit (✎)</strong>.</li>
+          <li><strong>1-Minute Unanswered Auto-Snooze:</strong> Tapping the notification body opens the <strong>Reminders Timeline</strong> directly. If an alarm goes unanswered for 1 minute, the ringtone stops, the notification remains visible at the top of the notification drawer, and the reminder is automatically snoozed by +15 minutes in your timeline.</li>
+        </ul>
+      </div>
+
+      <div class="english-block">
+        <h3>4. Device Permissions &amp; Adaptive Battery-Saving GPS</h3>
+        <p>Permissions are requested strictly on-demand when you use their corresponding features:</p>
+        <ul>
+          <li><strong>Notifications, Exact Alarm, Full-Screen Intent, Vibrate &amp; Boot Completed:</strong> Used strictly to deliver timely reminders, play alarm tones, and reschedule active alarms after a device reboot.</li>
+          <li><strong>Adaptive GPS Location (Non-Continuous):</strong> GPS is <strong>never kept continuously active</strong>. It activates strictly when both the Geofence radar toggle is enabled AND at least one active geofenced reminder or location exists, utilizing an adaptive polling algorithm (ranging from 15 seconds when approaching a target up to 5 minutes at long distances) to minimize battery consumption and protect location privacy.</li>
+          <li><strong>Microphone (Record Audio):</strong> Used solely when activating voice-to-text dictation or recording voice memos in the Ideas section.</li>
+          <li><strong>Camera:</strong> Used solely when capturing photos for reminders/locations or recording short videos in the Ideas section.</li>
+          <li><strong>Storage / All Files Access:</strong> Used strictly to maintain the automatic local backup inside the root <code>YAAD</code> folder and store user attachments on the device.</li>
+        </ul>
+      </div>
+
+      <div class="english-block">
+        <h3>5. External Services &amp; Narvan Engineering Solutions (AI &amp; IoT)</h3>
+        <ul>
+          <li><strong>Map Display &amp; Reverse Geocoding:</strong> Uses OpenStreetMap / Nominatim strictly when viewing maps or converting coordinates to readable addresses. No personal Google Maps API key is requested or stored.</li>
+          <li><strong>Optional Google Calendar Sync:</strong> Reminders are synced with your personal Google Calendar strictly if you explicitly opt in via the "Sync &amp; Services" settings.</li>
+          <li><strong>Narvan Team Edge AI &amp; IoT Systems:</strong> Across Narvan Team's broader software, Edge AI, and industrial IoT hardware controllers (GSM/SMS and sensor telemetry), all operational and telemetry data remains strictly under the ownership and local/private infrastructure of the user or enterprise client. We never sell, rent, or monetize user data.</li>
+        </ul>
+      </div>
+
+      <div class="english-block" style="margin-bottom: 0; padding-top: 18px; border-top: 1px solid var(--border-hairline);">
+        <strong>Developer:</strong> Narvan Team (Narvan Software Team) &nbsp;•&nbsp;
+        <strong>Support Email:</strong> <a href="mailto:narvanapplications@gmail.com" style="color: var(--narvan-teal); font-weight: 700;">narvanapplications@gmail.com</a> &nbsp;•&nbsp;
+        <strong>Official Website:</strong> <a href="https://narvanteam.ir" target="_blank" rel="noopener noreferrer" style="color: var(--narvan-teal); font-weight: 700;">narvanteam.ir</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <img src="logo-horizontal.png" alt="گروه فناوری نارون" style="height: 34px; width: auto;" referrerpolicy="no-referrer" />
+        <span>© ۱۴۰۵ (2026) تمامی حقوق برای گروه فناوری نارون (Narvan Team) محفوظ است.</span>
+      </div>
+      <div style="display: flex; gap: 20px; font-weight: 700;">
+        <a href="index.html" style="color: var(--narvan-teal);">صفحه اصلی سایت</a>
+        <a href="mailto:narvanapplications@gmail.com" dir="ltr" style="color: var(--narvan-teal);">narvanapplications@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      try {
+        var now = new Date();
+        var faDate = new Intl.DateTimeFormat('fa-IR-u-ca-persian', { day: 'numeric', month: 'long', year: 'numeric' }).format(now);
+        var enDate = new Intl.DateTimeFormat('en-US', { day: 'numeric', month: 'long', year: 'numeric' }).format(now);
+        var el = document.getElementById('last-updated-date');
+        if (el) el.textContent = faDate + ' (' + enDate + ')';
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>
