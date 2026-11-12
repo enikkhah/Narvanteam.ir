@@ -745,6 +745,245 @@
     }
 
     /* ==========================================================================
+       3B. ENTERPRISE PRODUCT: SITE SUPERVISION & INSPECTION SUITE (سامانه نظارت کارگاهی)
+       ========================================================================== */
+    .supervisor-spotlight-shell {
+      background: linear-gradient(145deg, #0B1528 0%, #13233F 100%);
+      color: #F8FAFC;
+      border-radius: 28px;
+      padding: 48px 40px;
+      margin-bottom: 56px;
+      border: 1px solid rgba(238, 161, 37, 0.24);
+      box-shadow: 0 20px 45px -10px rgba(11, 21, 40, 0.28);
+    }
+
+    .supervisor-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .supervisor-sector-tag {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #FBBF24;
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+
+    .supervisor-icon-frame {
+      width: 68px;
+      height: 68px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(238, 161, 37, 0.22), rgba(29, 78, 216, 0.25));
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #FBBF24;
+    }
+
+    .market-audience-bar {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 18px 22px;
+      margin-bottom: 36px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .audience-item {
+      border-right: 3px solid var(--narvan-amber);
+      padding-right: 12px;
+    }
+
+    .audience-item strong {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 2px;
+    }
+
+    .audience-item span {
+      display: block;
+      font-size: 0.78rem;
+      color: #94A3B8;
+      line-height: 1.5;
+    }
+
+    .supervisor-screen-tab {
+      font-family: inherit;
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 7px 15px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: #CBD5E1;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .supervisor-screen-tab:hover {
+      color: #FFFFFF;
+    }
+
+    .supervisor-screen-tab.active {
+      background: var(--narvan-amber);
+      color: #0F172A;
+      font-weight: 800;
+    }
+
+    .supervisor-screen-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .supervisor-screen-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--narvan-amber);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+    }
+
+    .supervisor-screen-card:hover .phone-frame img {
+      transform: scale(1.02);
+    }
+
+    /* ==========================================================================
+       3C. HEALTHCARE PRODUCT: DR IZADY PATIENT CRM & SMART COMMUNICATION SUITE
+       ========================================================================== */
+    .medical-spotlight-shell {
+      background: linear-gradient(145deg, #072A26 0%, #0D3B38 55%, #0F243C 100%);
+      color: #F8FAFC;
+      border-radius: 28px;
+      padding: 48px 40px;
+      margin-bottom: 56px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      box-shadow: 0 20px 45px -10px rgba(7, 42, 38, 0.28);
+    }
+
+    .medical-sector-tag {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #7DD3FC;
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+
+    .medical-avatar-frame {
+      width: 74px;
+      height: 74px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid rgba(56, 189, 248, 0.55);
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .medical-avatar-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .medical-audience-item {
+      border-right: 3px solid #38BDF8;
+      padding-right: 12px;
+    }
+
+    .medical-audience-item strong {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 2px;
+    }
+
+    .medical-audience-item span {
+      display: block;
+      font-size: 0.78rem;
+      color: #CBD5E1;
+      line-height: 1.55;
+    }
+
+    .medical-screen-tab {
+      font-family: inherit;
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 7px 15px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: #CBD5E1;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .medical-screen-tab:hover {
+      color: #FFFFFF;
+    }
+
+    .medical-screen-tab.active {
+      background: #38BDF8;
+      color: #0F172A;
+      font-weight: 800;
+    }
+
+    .medical-screens-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .medical-screen-card {
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .medical-screen-card:hover {
+      transform: translateY(-5px);
+      border-color: #38BDF8;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+    }
+
+    .medical-screen-card:hover .phone-frame img {
+      transform: scale(1.02);
+    }
+
+    /* ==========================================================================
        OTHER NARVAN PORTFOLIO ITEMS & FILTER TABS
        ========================================================================== */
     .filter-tabs {
@@ -1165,7 +1404,8 @@
     }
 
     @media (max-width: 1024px) {
-      .yaad-screens-grid {
+      .yaad-screens-grid,
+      .medical-screens-grid {
         grid-template-columns: repeat(3, 1fr);
       }
       .yaad-spotlight-top {
@@ -1186,7 +1426,8 @@
       .portfolio-card {
         grid-column: span 12;
       }
-      .yaad-screens-grid {
+      .yaad-screens-grid,
+      .medical-screens-grid {
         grid-template-columns: repeat(2, 1fr);
       }
       .arch-steps {
@@ -1195,8 +1436,13 @@
       .nav-links {
         display: none;
       }
-      .yaad-spotlight-shell {
+      .yaad-spotlight-shell,
+      .supervisor-spotlight-shell,
+      .medical-spotlight-shell {
         padding: 32px 22px;
+      }
+      .market-audience-bar {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -1204,7 +1450,9 @@
       .metrics-strip,
       .yaad-feature-grid,
       .yaad-screens-grid,
-      .hero-pillars-bar {
+      .medical-screens-grid,
+      .hero-pillars-bar,
+      .market-audience-bar {
         grid-template-columns: 1fr;
       }
     }
@@ -1230,7 +1478,9 @@
       <!-- Zone 2: Single-Line Navigation Links -->
       <nav class="nav-links" aria-label="منوی اصلی">
         <a href="#services">حوزه‌های تخصصی</a>
-        <a href="#yaad-showcase">اپلیکیشن یاد (YAAD)</a>
+        <a href="#yaad-showcase">اپلیکیشن یاد</a>
+        <a href="#supervisor-showcase">نظارت کارگاهی</a>
+        <a href="#medical-crm-showcase">CRM پزشکان</a>
         <a href="#projects">سایر پروژه‌ها</a>
         <a href="privacy.html">حریم خصوصی</a>
         <a href="#contact">تماس با ما</a>
@@ -1238,7 +1488,7 @@
 
       <!-- Zone 3: Single Primary Action -->
       <div class="header-actions">
-        <a href="#yaad-showcase" class="btn btn-primary">مشاهده اپلیکیشن یاد</a>
+        <a href="#medical-crm-showcase" class="btn btn-primary">محصولات و سامانه‌ها</a>
       </div>
     </div>
   </header>
@@ -1259,8 +1509,10 @@
               ما در <strong>گروه فناوری نارون (Narvan Team)</strong> سامانه‌های نرم‌افزاری، اپلیکیشن‌های موبایل با معماری محلی (Local-First)، مدل‌های کاربردی هوش مصنوعی و کنترلرهای سخت‌افزاری اینترنت اشیاء (IoT) را با تمرکز بر پایداری، امنیت داده و تجربه کاربری مهندسی می‌کنیم.
             </p>
             <div class="hero-cta-row">
-              <a href="#yaad-showcase" class="btn btn-primary">معرفی و تصاویر اپلیکیشن یاد</a>
-              <a href="privacy.html" class="btn btn-outline">سیاست حریم خصوصی اپ یاد</a>
+              <a href="#yaad-showcase" class="btn btn-primary">اپلیکیشن یاد (YAAD)</a>
+              <a href="#supervisor-showcase" class="btn btn-outline">سامانه نظارت کارگاهی</a>
+              <a href="#medical-crm-showcase" class="btn btn-outline">CRM بیماران (ویژه پزشکان)</a>
+              <a href="privacy.html" class="btn btn-outline">حریم خصوصی</a>
             </div>
             <div class="hero-meta">
               <span>توسعه نرم‌افزارهای وب و موبایل</span>
@@ -1653,7 +1905,7 @@
             </div>
 
             <!-- Screen 12: Splash Screen -->
-            <div class="yaad-screen-card" data-screen-cat="timeline" onclick="openLightbox(11)">
+            <div class="yaad-screen-card" data-screen-cat="timeline" onclick="openLightbox('yaad', 11)">
               <div class="phone-frame">
                 <img
                   src="public/assets/aistudio/Screenshot_20261110_153354_YAAD_22291eb3.jpg"
@@ -1665,6 +1917,414 @@
               </div>
               <div class="screen-caption-title">۱۲. هویت بصری اپ یاد (v1.2.11)</div>
               <div class="screen-caption-desc">صفحه آغازین رسمی «یاد؛ یادآور آنچه مهم است | YAAD; Reminding What Matters»</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3B. ENTERPRISE PRODUCT: SITE SUPERVISION & INSPECTION APPLICATION (سامانه نظارت کارگاهی - بازساز) -->
+        <div id="supervisor-showcase" style="padding-top: 24px; margin-bottom: 56px;">
+          <div class="section-header" style="margin-bottom: 32px;">
+            <div>
+              <span class="section-kicker">راهکار سازمانی و صنعتی اجرا شده توسط گروه فناوری نارون</span>
+              <h2 class="section-title">سامانه و اپلیکیشن نظارت کارگاهی (سامانه بازساز)</h2>
+            </div>
+            <p class="section-desc">
+              پلتفرم تخصصی مدیریت بازرسی‌های میدانی، ثبت گزارشات روزانه مهندسی، کنترل پروژه، ردیابی عدم انطباق‌ها (NCR) و مستندسازی کارگاه‌های صنعتی، فولادی و عمرانی.
+            </p>
+          </div>
+
+          <div class="supervisor-spotlight-shell">
+            <div class="yaad-spotlight-top">
+              <div>
+                <div class="supervisor-badge-row">
+                  <span class="supervisor-sector-tag">پروژه‌های صنعتی، فولادی و EPC</span>
+                  <span class="supervisor-sector-tag">مهندسین مشاور و دستگاه نظارت</span>
+                  <span class="supervisor-sector-tag">کنترل پروژه و دفاتر فنی</span>
+                </div>
+
+                <div class="yaad-brand-lockup">
+                  <div class="supervisor-icon-frame" aria-hidden="true">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z"></path>
+                      <path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"></path>
+                      <path d="M4 15v-3a6 6 0 0 1 6-6h0"></path>
+                      <path d="M14 6h0a6 6 0 0 1 6 6v3"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>سامانه جامع نظارت کارگاهی و کنترل مهندسی «بازساز»</h3>
+                    <div class="yaad-sub" style="color: #FBBF24;">Industrial Site Supervision, QA/QC &amp; Project Control Suite</div>
+                  </div>
+                </div>
+
+                <p class="yaad-desc-text">
+                  <strong>سامانه و اپلیکیشن نظارت کارگاهی نارون</strong> با هدف حذف کاغذبازی در کارگاه‌های بزرگ صنعتی و ایجاد شفافیت لحظه‌ای میان <strong>کارفرما، مهندسین مشاور (دستگاه نظارت) و پیمانکاران اجرایی</strong> طراحی و در پروژه‌های عظیم صنعتی (نظیر پروژه‌های نورد گرم فولاد مبارکه) پیاده‌سازی شده است. مهندسین ناظر مقیم در ۵ دیسیپلین تخصصی می‌توانند گزارش‌های روزانه، مستندات تصویری، مختصات GPS زون‌های بازرسی، آمار نیروی انسانی و دستورکارهای عدم انطباق (<code>NCR</code>) را در لحظه ثبت کرده و خروجی رسمی <strong>PDF</strong> و <strong>Excel</strong> منطبق با برنامه زمان‌بندی (<code>P6 / MSP</code>) دریافت کنند.
+                </p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                  <a href="#contact" class="btn btn-yaad" style="background-color: var(--narvan-amber); color: #0F172A;" onclick="selectSupervisorTopic()">درخواست دمو و استقرار سازمانی ←</a>
+                  <a href="#supervisor-screens-container" class="btn btn-outline" style="background: rgba(255,255,255,0.08); color: #FFFFFF; border-color: rgba(255,255,255,0.2);">مشاهده ۸ تصویر واقعی محیط سامانه</a>
+                </div>
+              </div>
+
+              <div class="yaad-feature-grid">
+                <div class="yaad-feat-box">
+                  <strong>پوشش ۵ دیسیپلین تخصصی مهندسی</strong>
+                  <span>سیویل و سازه، مکانیک نصب تجهیزات، مکانیک سیالات و پایپینگ، برق و ابزار دقیق، و بازرسی جوش و رنگ</span>
+                </div>
+                <div class="yaad-feat-box">
+                  <strong>کنترل پروژه، P6/MSP و منحنی S-Curve</strong>
+                  <span>پایش پیشرفت فیزیکی برنامه در برابر واقعی، مدیریت اسناد پیمان و صدور گزارش ماهانه PDF و Excel</span>
+                </div>
+                <div class="yaad-feat-box">
+                  <strong>مدیریت عیوب فنی و عدم انطباق (NCR)</strong>
+                  <span>رهگیری کامل وضعیت نواقص (باز، در حال اقدام، رفع‌شده و تأیید ناظر) همراه با مستندات تصویری</span>
+                </div>
+                <div class="yaad-feat-box">
+                  <strong>نقشه GPS کارگاه و ماشین‌حساب مهندسی</strong>
+                  <span>ثبت موقعیت ماهواره‌ای زون‌های پروژه + ماشین‌حساب مهندسی شناور با بانک فرمول‌های تخصصی کارگاهی</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Target Market / B2B Value Strip -->
+            <div class="market-audience-bar">
+              <div class="audience-item">
+                <strong>کارفرمایان صنعتی و فولادی</strong>
+                <span>اشراف لحظه‌ای بر پیشرفت واقعی پروژه‌ها، عملکرد پیمانکاران و گلوگاه‌های اجرایی کارگاه</span>
+              </div>
+              <div class="audience-item">
+                <strong>شرکت‌های مهندسین مشاور</strong>
+                <span>استانداردسازی گزارشات روزانه ناظران مقیم، آرشیو متمرکز مستندات و کنترل کیفیت (QA/QC)</span>
+              </div>
+              <div class="audience-item">
+                <strong>پیمانکاران EPC و دفاتر فنی</strong>
+                <span>ثبت دقیق نفر-روز نیروی انسانی، ماشین‌آلات، صورت‌جلسات کارگاهی و پیگیری سریع رفع نواقص</span>
+              </div>
+              <div class="audience-item">
+                <strong>مهندسین ناظر و بازرسان فنی</strong>
+                <span>ثبت سریع گزارش در سایت با موبایل، ضمیمه عکس، ثبت زون GPS و ابزار محاسبات مهندسی</span>
+              </div>
+            </div>
+
+            <!-- Interactive 8-Screenshot Gallery Header & Filter Bar -->
+            <div class="yaad-gallery-header">
+              <div>
+                <div class="yaad-gallery-title">گالری محیط سامانه نظارت کارگاهی (۸ تصویر واقعی از ماژول‌های اجرایی)</div>
+                <div class="yaad-gallery-subtitle">برای بزرگ‌نمایی و بررسی جزئیات مهندسی هر صفحه، روی تصویر مورد نظر کلیک کنید:</div>
+              </div>
+
+              <div class="yaad-screen-tabs" role="tablist" aria-label="فیلتر تصاویر سامانه نظارت کارگاهی">
+                <button type="button" class="supervisor-screen-tab active" onclick="filterSupervisorScreens('all', this)">همه نماها (۸)</button>
+                <button type="button" class="supervisor-screen-tab" onclick="filterSupervisorScreens('reports', this)">پروژه‌ها و گزارش روزانه (۳)</button>
+                <button type="button" class="supervisor-screen-tab" onclick="filterSupervisorScreens('analytics', this)">داشبورد، NCR و گزارش ماهانه (۳)</button>
+                <button type="button" class="supervisor-screen-tab" onclick="filterSupervisorScreens('tools', this)">نقشه GPS و ابزار مهندسی (۲)</button>
+              </div>
+            </div>
+
+            <!-- 8 Supervisor Screenshots Grid -->
+            <div class="yaad-screens-grid" id="supervisor-screens-container">
+              <!-- Supervisor Screen 1: Project, Contract & Schedule Management -->
+              <div class="supervisor-screen-card" data-sup-cat="reports" onclick="openLightbox('supervisor', 0)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_031448_Supervisor_e95bb45e.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_031448_Supervisor_e95bb45e.jpg';"
+                    alt="مدیریت پروژه‌ها، قراردادها و برنامه زمان‌بندی در سامانه نظارت کارگاهی"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۱. مدیریت پروژه، پیمان و زمان‌بندی</div>
+                <div class="screen-caption-desc">مشخصات ارکان پروژه (کارفرما، مشاور، پیمانکار)، اسناد پیمان و آپلود برنامه زمان‌بندی P6 / MSP / Excel</div>
+              </div>
+
+              <!-- Supervisor Screen 2: Daily Multi-Discipline Report Entry -->
+              <div class="supervisor-screen-card" data-sup-cat="reports" onclick="openLightbox('supervisor', 1)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_031334_Supervisor_f4de7b68.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_031334_Supervisor_f4de7b68.jpg';"
+                    alt="ثبت گزارش روزانه نظارت کارگاهی به تفکیک دیسیپلین مهندسی"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۲. ثبت گزارش روزانه ۵ دیسیپلین</div>
+                <div class="screen-caption-desc">انتخاب دیسیپلین تخصصی (سیویل، مکانیک، پایپینگ، برق، جوش و رنگ)، شیفت کاری و موقعیت GPS</div>
+              </div>
+
+              <!-- Supervisor Screen 3: Reports Archive & Filtering -->
+              <div class="supervisor-screen-card" data-sup-cat="reports" onclick="openLightbox('supervisor', 2)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_031343_Supervisor_e28502c1.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_031343_Supervisor_e28502c1.jpg';"
+                    alt="آرشیو گزارشات روزانه کارگاهی و فیلتر بر اساس زون و دیسیپلین"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۳. آرشیو و جستجوی گزارشات کارگاه</div>
+                <div class="screen-caption-desc">فیلتر دیسیپلین‌ها، نمایش زون اجرایی، پیمانکار، تعداد نفرات، عکس‌ها و وضعیت عدم انطباق (NCR)</div>
+              </div>
+
+              <!-- Supervisor Screen 4: Analytical Dashboard & KPIs -->
+              <div class="supervisor-screen-card" data-sup-cat="analytics" onclick="openLightbox('supervisor', 3)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_031408_Supervisor_daece7f7.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_031408_Supervisor_daece7f7.jpg';"
+                    alt="داشبورد تحلیلی و شاخص‌های کلیدی نظارت کارگاهی"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۴. داشبورد تحلیلی و شاخص‌های KPI</div>
+                <div class="screen-caption-desc">پایش بلادرنگ تعداد گزارشات روزانه، مستندات تصویری برچسب‌دار، نفر-روز نیروی انسانی و عدم انطباق‌ها</div>
+              </div>
+
+              <!-- Supervisor Screen 5: Technical Defects & NCR Tracking -->
+              <div class="supervisor-screen-card" data-sup-cat="analytics" onclick="openLightbox('supervisor', 4)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_031415_Supervisor_f2a5bdf7.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_031415_Supervisor_f2a5bdf7.jpg';"
+                    alt="پایش وضعیت عیوب فنی و عدم انطباق‌ها (NCR)"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۵. پایش عیوب فنی و عدم انطباق (NCR)</div>
+                <div class="screen-caption-desc">نمودار درصد رفع نقص، تفکیک موارد تأییدشده، در دست اقدام و باز به همراه عملکرد هر دیسیپلین</div>
+              </div>
+
+              <!-- Supervisor Screen 6: Monthly Performance & S-Curve Export -->
+              <div class="supervisor-screen-card" data-sup-cat="analytics" onclick="openLightbox('supervisor', 5)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_031401_Supervisor_03299ed0.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_031401_Supervisor_03299ed0.jpg';"
+                    alt="گزارش عملکرد ماهانه و نمودار پیشرفت تجمعی S-Curve با خروجی PDF و Excel"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۶. گزارش ماهانه و نمودار S-Curve</div>
+                <div class="screen-caption-desc">پایش پیشرفت تجمعی برنامه در برابر واقعی همراه با خروجی رسمی چاپ PDF، فایل Excel و خلاصه مدیریتی</div>
+              </div>
+
+              <!-- Supervisor Screen 7: GPS Site Inspection Map -->
+              <div class="supervisor-screen-card" data-sup-cat="tools" onclick="openLightbox('supervisor', 6)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_031422_Supervisor_0a20f2fd.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_031422_Supervisor_0a20f2fd.jpg';"
+                    alt="نقشه و زون‌های بازرسی کارگاه صنعتی مبتنی بر GPS"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۷. نقشه GPS و زون‌های بازرسی کارگاه</div>
+                <div class="screen-caption-desc">ثبت و جانمایی مختصات جغرافیایی بازرسی‌های انجام‌شده در بخش‌های مختلف سایت صنعتی</div>
+              </div>
+
+              <!-- Supervisor Screen 8: Floating Engineering Calculator & Formulas -->
+              <div class="supervisor-screen-card" data-sup-cat="tools" onclick="openLightbox('supervisor', 7)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_031426_Supervisor_2f8c7472.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_031426_Supervisor_2f8c7472.jpg';"
+                    alt="ماشین‌حساب مهندسی کارگاه و بانک فرمول‌های تخصصی"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۸. ماشین‌حساب مهندسی و فرمول‌های کارگاهی</div>
+                <div class="screen-caption-desc">ابزار محاسبات مهندسی و بانک فرمول‌های کارگاهی با قابلیت تنظیم شفافیت شناور روی صفحات گزارش</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3C. HEALTHCARE & MEDICAL CRM PRODUCT: DR IZADY PATIENT CRM (اپلیکیشن CRM بیماران دکتر ایزدی) -->
+        <div id="medical-crm-showcase" style="padding-top: 24px; margin-bottom: 56px;">
+          <div class="section-header" style="margin-bottom: 32px;">
+            <div>
+              <span class="section-kicker">راهکار تخصصی سلامت دیجیتال و مدیریت مطب · اجرا شده توسط گروه فناوری نارون</span>
+              <h2 class="section-title">اپلیکیشن CRM و مدیریت هوشمند پرونده بیماران (Dr Izady CRM)</h2>
+            </div>
+            <p class="section-desc">
+              سامانه اختصاصی ثبت مشخصات، تشکیل پرونده و سوابق بیماری، اطلاع‌رسانی هوشمند گروهی و پشتیبان‌گیری دوگانه محلی و ابری با الگوریتم‌های امنیتی پیشرفته ویژه جامعه پزشکان و کلینیک‌های تخصصی.
+            </p>
+          </div>
+
+          <div class="medical-spotlight-shell">
+            <div class="yaad-spotlight-top">
+              <div>
+                <div class="supervisor-badge-row">
+                  <span class="medical-sector-tag">ویژه جامعه پزشکان و جراحان</span>
+                  <span class="medical-sector-tag">پشتیبان‌گیری رمزنگاری‌شده محلی و ابری</span>
+                  <span class="medical-sector-tag">اطلاع‌رسانی و نوبت‌دهی هوشمند</span>
+                </div>
+
+                <div class="yaad-brand-lockup">
+                  <div class="medical-avatar-frame">
+                    <img
+                      src="public/assets/aistudio/IMG_20261108_151135_819_5bfe6c5e.jpg"
+                      onerror="this.onerror=null;this.src='assets/aistudio/IMG_20261108_151135_819_5bfe6c5e.jpg';"
+                      alt="نشان اختصاصی سامانه مدیریت و اطلاع‌رسانی بیماران دکتر علیرضا ایزدی (Dr Izady CRM)"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                  <div>
+                    <h3>سامانه مدیریت پرونده و اطلاع‌رسانی بیماران دکتر ایزدی</h3>
+                    <div class="yaad-sub" style="color: #7DD3FC;">Dr Izady Patient CRM, EHR &amp; Smart Medical Communication Suite</div>
+                  </div>
+                </div>
+
+                <p class="yaad-desc-text">
+                  <strong>اپلیکیشن CRM بیماران دکتر ایزدی</strong> یکی دیگر از محصولات اجرا شده توسط <strong>تیم فناوری نارون</strong> است که جهت ثبت دقیق مشخصات، تشکیل پرونده الکترونیک، نگهداری سوابق بیماری و مدیریت ارتباط مستمر با بیماران آقای دکتر علیرضا ایزدی مهندسی شده است. این سامانه با بهره‌گیری از <strong>الگوریتم‌های پیچیده و هوشمند رمزنگاری</strong>، امکان <strong>پشتیبان‌گیری دوگانه (محلی روی حافظه دستگاه و فضای ابری امن)</strong> را با حداکثر ضریب حفاظت از اسرار پزشکی فراهم می‌سازد و به پزشک اجازه می‌دهد برنامه حضور خود در بیمارستان‌ها (نظیر بیمارستان سینا اصفهان) یا مطب را در چند ثانیه به گروه‌های هدف بیماران اطلاع‌رسانی کند.
+                </p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                  <a href="#contact" class="btn btn-yaad" style="background-color: #38BDF8; color: #0F172A;" onclick="selectMedicalCrmTopic()">سفارش نسخه اختصاصی ویژه پزشکان ←</a>
+                  <a href="#medical-screens-container" class="btn btn-outline" style="background: rgba(255,255,255,0.08); color: #FFFFFF; border-color: rgba(255,255,255,0.2);">مشاهده تصاویر واقعی محیط اپلیکیشن</a>
+                </div>
+              </div>
+
+              <div class="yaad-feature-grid">
+                <div class="yaad-feat-box">
+                  <strong style="color: #7DD3FC;">پرونده الکترونیک و سوابق بالینی</strong>
+                  <span>ثبت ساختاریافته مشخصات بیمار، سوابق بیماری، دسته‌بندی خودکار در گروه‌های درمانی و جستجوی آنی نام یا شماره تماس</span>
+                </div>
+                <div class="yaad-feat-box">
+                  <strong style="color: #7DD3FC;">پشتیبان‌گیری امن محلی و ابری</strong>
+                  <span>ذخیره و فراخوانی (Restore) پایگاه داده بیماران با الگوریتم‌های امنیتی پیشرفته در حافظه داخلی و فضای ابری</span>
+                </div>
+                <div class="yaad-feat-box">
+                  <strong style="color: #7DD3FC;">اطلاع‌رسانی و ارتباطات هوشمند</strong>
+                  <span>ارسال پیامک گروهی و فردی هوشمند جهت اعلام برنامه حضور پزشک در بیمارستان یا مطب و پیگیری روند درمان (Follow-up)</span>
+                </div>
+                <div class="yaad-feat-box">
+                  <strong style="color: #7DD3FC;">ارگونومی بصری دوحالته (Light / Dark)</strong>
+                  <span>رابط کاربری سریع و استاندارد با پوسته روشن و تاریک جهت جلوگیری از خستگی چشم پزشک در شیفت‌های بیمارستانی</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Target Market / Medical Community Value Strip -->
+            <div class="market-audience-bar">
+              <div class="medical-audience-item">
+                <strong>پزشکان متخصص و جراحان</strong>
+                <span>دسترسی همراه و سریع به پرونده و سوابق بیماری مراجعین در مطب، کلینیک و بیمارستان‌های مختلف</span>
+              </div>
+              <div class="medical-audience-item">
+                <strong>هماهنگی حضور در بیمارستان و مطب</strong>
+                <span>اطلاع‌رسانی آنی روز و ساعت حضور پزشک به گروه‌های بیماران با قالب‌های آماده و کاهش نوبت‌های سوخته (No-Show)</span>
+              </div>
+              <div class="medical-audience-item">
+                <strong>حفظ محرمانگی و امنیت داده‌های سلامت</strong>
+                <span>حفاظت از اطلاعات حساس بیماران با رمزنگاری هوشمند و مالکیت ۱۰۰٪ پزشک بر فایل‌های پشتیبان محلی و ابری</span>
+              </div>
+              <div class="medical-audience-item">
+                <strong>پیگیری مستمر بیماران مزمن و پس از عمل</strong>
+                <span>ارتباط هدفمند با بیماران بر اساس گروه درمانی جهت یادآوری چکاپ‌های دوره‌ای و افزایش رضایت مراجعین</span>
+              </div>
+            </div>
+
+            <!-- Interactive 5-Asset Gallery Header & Filter Bar -->
+            <div class="yaad-gallery-header">
+              <div>
+                <div class="yaad-gallery-title">گالری محیط اپلیکیشن CRM بیماران دکتر ایزدی (۵ تصویر واقعی از سامانه)</div>
+                <div class="yaad-gallery-subtitle">برای بزرگ‌نمایی و مشاهده جزئیات هر صفحه، روی تصویر مورد نظر کلیک کنید:</div>
+              </div>
+
+              <div class="yaad-screen-tabs" role="tablist" aria-label="فیلتر تصاویر اپلیکیشن CRM بیماران دکتر ایزدی">
+                <button type="button" class="medical-screen-tab active" onclick="filterMedicalScreens('all', this)">همه نماها (۵)</button>
+                <button type="button" class="medical-screen-tab" onclick="filterMedicalScreens('crm', this)">ثبت پرونده و اطلاع‌رسانی (۲)</button>
+                <button type="button" class="medical-screen-tab" onclick="filterMedicalScreens('backup', this)">لیست بیماران و پشتیبان‌گیری امن (۲)</button>
+                <button type="button" class="medical-screen-tab" onclick="filterMedicalScreens('brand', this)">هویت بصری اختصاصی پزشک (۱)</button>
+              </div>
+            </div>
+
+            <!-- 5 Medical CRM Screenshots Grid -->
+            <div class="medical-screens-grid" id="medical-screens-container">
+              <!-- Medical Screen 1: Light Mode Patient Registration & Group SMS -->
+              <div class="medical-screen-card" data-med-cat="crm" onclick="openLightbox('medical', 0)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_032256_Dr_Izady_CRM_010196e9.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_032256_Dr_Izady_CRM_010196e9.jpg';"
+                    alt="نمای روشن ثبت بیمار جدید و ارسال پیامک گروهی در سامانه Dr Izady CRM"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۱. ثبت پرونده و اطلاع‌رسانی (پوسته روشن)</div>
+                <div class="screen-caption-desc">ثبت سریع مشخصات بیمار و ارسال پیامک گروهی هوشمند هماهنگی حضور در بیمارستان سینا اصفهان</div>
+              </div>
+
+              <!-- Medical Screen 2: Dark Mode Ergonomic Interface -->
+              <div class="medical-screen-card" data-med-cat="crm" onclick="openLightbox('medical', 1)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_032632_Dr_Izady_CRM_24cce78f.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_032632_Dr_Izady_CRM_24cce78f.jpg';"
+                    alt="نمای تاریک استاندارد پزشکی در سامانه مدیریت و اطلاع‌رسانی بیماران دکتر ایزدی"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۲. رابط کاربری شیفت شب (پوسته تاریک)</div>
+                <div class="screen-caption-desc">طراحی ارگونومیک دوحالته (Dark Mode) برای کاربری راحت پزشک در شیفت‌های بیمارستانی و کلینیک</div>
+              </div>
+
+              <!-- Medical Screen 3: Patient Directory, Grouping & Search -->
+              <div class="medical-screen-card" data-med-cat="backup" onclick="openLightbox('medical', 2)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_032606_Dr_Izady_CRM_18decdab.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_032606_Dr_Izady_CRM_18decdab.jpg';"
+                    alt="لیست بیماران، گروه‌بندی هوشمند و جستجوی سریع در اپلیکیشن CRM دکتر ایزدی"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۳. پرونده بیماران و گروه‌بندی هوشمند</div>
+                <div class="screen-caption-desc">جستجوی آنی نام یا شماره موبایل، دسته‌بندی خودکار در گروه‌ها و ارسال مستقیم پیام به هر بیمار</div>
+              </div>
+
+              <!-- Medical Screen 4: Encrypted Local & Cloud Backup / Restore -->
+              <div class="medical-screen-card" data-med-cat="backup" onclick="openLightbox('medical', 3)">
+                <div class="phone-frame">
+                  <img
+                    src="public/assets/aistudio/Screenshot_20261112_032625_Dr_Izady_CRM_c2ebea04.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/Screenshot_20261112_032625_Dr_Izady_CRM_c2ebea04.jpg';"
+                    alt="پشتیبان‌گیری امن محلی و ابری و فراخوانی اطلاعات بیماران در Dr Izady CRM"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+                <div class="screen-caption-title">۴. پشتیبان‌گیری و فراخوانی امن اطلاعات</div>
+                <div class="screen-caption-desc">ذخیره‌سازی رمزنگاری‌شده محلی (پوشه Downloads) و ابری همراه با بازیابی آنی پرونده بیماران</div>
+              </div>
+
+              <!-- Medical Screen 5: Custom Physician Brand Identity & Avatar -->
+              <div class="medical-screen-card" data-med-cat="brand" onclick="openLightbox('medical', 4)">
+                <div class="phone-frame" style="display: flex; align-items: center; justify-content: center; padding: 16px; background: linear-gradient(160deg, #0D273D 0%, #071928 100%);">
+                  <img
+                    src="public/assets/aistudio/IMG_20261108_151135_819_5bfe6c5e.jpg"
+                    onerror="this.onerror=null;this.src='assets/aistudio/IMG_20261108_151135_819_5bfe6c5e.jpg';"
+                    alt="آیکون و هویت بصری اختصاصی اپلیکیشن دکتر علیرضا ایزدی"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    style="height: auto; max-height: 100%; object-fit: contain; border-radius: 22px;"
+                  />
+                </div>
+                <div class="screen-caption-title">۵. هویت بصری اختصاصی پزشک</div>
+                <div class="screen-caption-desc">طراحی آیکون و برندینگ اختصاصی متناسب با هویت حرفه‌ای پزشک و کلینیک درمانی</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1876,6 +2536,8 @@
               <div class="form-group">
                 <label for="sender-topic">موضوع پیام</label>
                 <select id="sender-topic" class="form-control">
+                  <option value="سفارش / دمو اپلیکیشن CRM بیماران (ویژه پزشکان و کلینیک‌ها)">سفارش / دمو اپلیکیشن CRM بیماران (ویژه پزشکان و کلینیک‌ها)</option>
+                  <option value="دمو و سفارش سامانه نظارت کارگاهی (بازساز)">دمو و سفارش سامانه نظارت کارگاهی (بازساز)</option>
                   <option value="پشتیبانی اپلیکیشن یاد (YAAD)">پشتیبانی اپلیکیشن یاد (YAAD)</option>
                   <option value="سفارش توسعه نرم‌افزار / اپلیکیشن">سفارش توسعه نرم‌افزار و اپلیکیشن</option>
                   <option value="مشاوره هوش مصنوعی (AI)">مشاوره و پیاده‌سازی هوش مصنوعی (AI)</option>
@@ -1935,6 +2597,8 @@
         <nav class="footer-nav" aria-label="لینک‌های فوتر">
           <a href="#services">حوزه‌های تخصصی</a>
           <a href="#yaad-showcase">اپلیکیشن یاد (YAAD)</a>
+          <a href="#supervisor-showcase">سامانه نظارت کارگاهی</a>
+          <a href="#medical-crm-showcase">CRM پزشکان</a>
           <a href="#projects">سایر پروژه‌ها</a>
           <a href="privacy.html" style="color: var(--narvan-teal);">سیاست حریم خصوصی (Privacy Policy)</a>
         </nav>
@@ -1952,67 +2616,67 @@
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153420_YAAD_527c2556.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153420_YAAD_527c2556.jpg',
-        title: '۱. تایم‌لاین هوشمند روزانه',
+        title: '۱. تایم‌لاین هوشمند روزانه (اپلیکیشن یاد)',
         desc: 'نمایش خط زمان «اکنون»، شمارش معکوس یادآور بعدی و تفکیک یادآورهای انجام‌شده'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153439_YAAD_472ad093.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153439_YAAD_472ad093.jpg',
-        title: '۲. ثبت سریع یادآور و ساعت غلتکی',
+        title: '۲. ثبت سریع یادآور و ساعت غلتکی (اپلیکیشن یاد)',
         desc: 'ورودی صوتی، انتخابگر ساعت غلتکی، میانبرهای زمانی (+۵ دقیقه، فردا ۹ صبح) و تاریخ شمسی'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261112_015405_YAAD_b2ac2bb3.jpg',
         fallback: 'assets/aistudio/Screenshot_20261112_015405_YAAD_b2ac2bb3.jpg',
-        title: '۳. رادار قطبی زنده حصار مکانی',
+        title: '۳. رادار قطبی زنده حصار مکانی (اپلیکیشن یاد)',
         desc: 'نمایش زنده جهت و بردار خروج از محدوده مکانی همراه با فاصله لحظه‌ای و مسیریابی'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153804_YAAD_ca3235fe.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153804_YAAD_ca3235fe.jpg',
-        title: '۴. تنظیم شعاع حصار مکانی',
+        title: '۴. تنظیم شعاع حصار مکانی (اپلیکیشن یاد)',
         desc: 'تعیین شعاع دقیق از ۱۰۰ متر تا ۲۵ کیلومتر و انتخاب شرط هشدار ورود، خروج یا هر دو'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153821_YAAD_4f6892d9.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153821_YAAD_4f6892d9.jpg',
-        title: '۵. ثبت ایده چندرسانه‌ای',
+        title: '۵. ثبت ایده چندرسانه‌ای (اپلیکیشن یاد)',
         desc: 'ثبت متن، تایپ صوتی، صدا، عکس، ویدیو و نقاشی دست‌خط + تنظیم مستقیم یادآور برای ایده'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153838_YAAD_25f076a8.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153838_YAAD_25f076a8.jpg',
-        title: '۶. سازماندهی ایده‌ها و افکار',
+        title: '۶. سازماندهی ایده‌ها و افکار (اپلیکیشن یاد)',
         desc: 'دسته‌بندی ایده‌ها (کاری، خانواده، شخصی) با نمایش زمان یادآور متصل به هر ایده'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153453_YAAD_2303c6ac.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153453_YAAD_2303c6ac.jpg',
-        title: '۷. مناسبت‌ها و تاریخ‌های مهم',
+        title: '۷. مناسبت‌ها و تاریخ‌های مهم (اپلیکیشن یاد)',
         desc: 'فیلتر تب‌بندی تولد و سالگرد ازدواج همراه با شمارش معکوس روزهای مانده تا مناسبت'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153634_YAAD_bcf1afb2.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153634_YAAD_bcf1afb2.jpg',
-        title: '۸. ثبت تولد و محاسبه سن',
+        title: '۸. ثبت تولد و محاسبه سن (اپلیکیشن یاد)',
         desc: 'ثبت تاریخ تولد و سالگردها به شمسی با قابلیت محاسبه خودکار سن و تنظیم هشدار'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153910_YAAD_e0b666d3.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153910_YAAD_e0b666d3.jpg',
-        title: '۹. ثبت مکان GPS و عکس محل',
+        title: '۹. ثبت مکان GPS و عکس محل (اپلیکیشن یاد)',
         desc: 'دریافت مختصات دقیق از ماهواره GPS و پیوست عکس زنده با دوربین یا از گالری'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261111_180631_YAAD_dcd7f5bf.jpg',
         fallback: 'assets/aistudio/Screenshot_20261111_180631_YAAD_dcd7f5bf.jpg',
-        title: '۱۰. هشدار تمام‌صفحه حصار مکانی',
+        title: '۱۰. هشدار تمام‌صفحه حصار مکانی (اپلیکیشن یاد)',
         desc: 'اعلان هوشمند ورود/خروج مکانی با کلیدهای عملیاتی توقف، قطع صدا، ویرایش و مسیریابی'
       },
       {
         src: 'public/assets/aistudio/Screenshot_20261110_153427_YAAD_8a7c18b3.jpg',
         fallback: 'assets/aistudio/Screenshot_20261110_153427_YAAD_8a7c18b3.jpg',
-        title: '۱۱. منوی دسترسی سریع چهارگانه',
+        title: '۱۱. منوی دسترسی سریع چهارگانه (اپلیکیشن یاد)',
         desc: 'ثبت آنی یادآور، مناسبت، ایده و موقعیت مکانی تنها با یک لمس از کلید شناور'
       },
       {
@@ -2023,6 +2687,91 @@
       }
     ];
 
+    var supervisorScreensData = [
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_031448_Supervisor_e95bb45e.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_031448_Supervisor_e95bb45e.jpg',
+        title: '۱. مدیریت پروژه‌ها، قراردادها و زمان‌بندی (سامانه نظارت کارگاهی)',
+        desc: 'مشاهده ارکان پیمان (کارفرما، مشاور، پیمانکار)، اسناد پیمان، آپلود فایل‌های زمان‌بندی P6 / MSP / Excel و نظرات ناظران'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_031334_Supervisor_f4de7b68.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_031334_Supervisor_f4de7b68.jpg',
+        title: '۲. ثبت گزارش روزانه ۵ دیسیپلین تخصصی (سامانه نظارت کارگاهی)',
+        desc: 'انتخاب دیسیپلین (سیویل و سازه، مکانیک نصب تجهیزات، مکانیک سیالات، برق و ابزار دقیق، جوش و رنگ)، تاریخ شمسی، شیفت و زون GPS'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_031343_Supervisor_e28502c1.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_031343_Supervisor_e28502c1.jpg',
+        title: '۳. آرشیو و جستجوی پیشرفته گزارشات کارگاه (سامانه نظارت کارگاهی)',
+        desc: 'فیلتر بر اساس دیسیپلین، جستجوی شماره گزارش و زون، نمایش پیمانکار، تعداد نفرات، مستندات تصویری و وضعیت عدم انطباق'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_031408_Supervisor_daece7f7.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_031408_Supervisor_daece7f7.jpg',
+        title: '۴. داشبورد تحلیلی و شاخص‌های کلیدی کارگاه (سامانه نظارت کارگاهی)',
+        desc: 'پایش لحظه‌ای گزارشات ثبت‌شده، عکس‌های مستند برچسب‌دار، مجموع نفر-روز نیروی انسانی و خلاصه وضعیت عدم انطباق‌ها'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_031415_Supervisor_f2a5bdf7.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_031415_Supervisor_f2a5bdf7.jpg',
+        title: '۵. پایش وضعیت عیوب فنی و عدم انطباق NCR (سامانه نظارت کارگاهی)',
+        desc: 'نمودار درصد رفع نقص کارگاه، تفکیک موارد رفع‌شده، در حال بررسی و باز به همراه عملکرد هر دیسیپلین مهندسی'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_031401_Supervisor_03299ed0.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_031401_Supervisor_03299ed0.jpg',
+        title: '۶. گزارش عملکرد ماهانه و نمودار S-Curve (سامانه نظارت کارگاهی)',
+        desc: 'تحلیل پیشرفت تجمعی برنامه در برابر واقعی (S-Curve)، آمار نیروی انسانی و خروجی رسمی چاپ PDF و فایل Excel'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_031422_Supervisor_0a20f2fd.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_031422_Supervisor_0a20f2fd.jpg',
+        title: '۷. نقشه GPS و زون‌های بازرسی کارگاه صنعتی (سامانه نظارت کارگاهی)',
+        desc: 'نمایش و ثبت موقعیت‌های جغرافیایی ثبت‌شده با ماهواره GPS در بخش‌ها و زون‌های مختلف پروژه'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_031426_Supervisor_2f8c7472.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_031426_Supervisor_2f8c7472.jpg',
+        title: '۸. ماشین‌حساب مهندسی و بانک فرمول‌های کارگاهی (سامانه نظارت کارگاهی)',
+        desc: 'ماشین‌حساب مهندسی پیشرفته همراه با تب فرمول‌های کارگاهی و قابلیت تنظیم شفافیت شناور (92%) حین گزارش‌نویسی'
+      }
+    ];
+
+    var medicalScreensData = [
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_032256_Dr_Izady_CRM_010196e9.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_032256_Dr_Izady_CRM_010196e9.jpg',
+        title: '۱. ثبت پرونده بیمار و ارسال پیامک گروهی هوشمند (نمای روشن - Dr Izady CRM)',
+        desc: 'ثبت سریع مشخصات و شماره تماس بیمار به همراه ارسال پیامک گروهی اطلاع‌رسانی حضور پزشک در بیمارستان سینا اصفهان'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_032632_Dr_Izady_CRM_24cce78f.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_032632_Dr_Izady_CRM_24cce78f.jpg',
+        title: '۲. رابط کاربری ارگونومیک ویژه شیفت بیمارستان (نمای تاریک - Dr Izady CRM)',
+        desc: 'پوسته تاریک استاندارد پزشکی جهت جلوگیری از خستگی چشم پزشک و منشی در شیفت‌های طولانی مطب و بیمارستان'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_032606_Dr_Izady_CRM_18decdab.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_032606_Dr_Izady_CRM_18decdab.jpg',
+        title: '۳. مدیریت لیست پرونده بیماران، گروه‌بندی و جستجوی آنی (Dr Izady CRM)',
+        desc: 'جستجوی لحظه‌ای بر اساس نام یا شماره موبایل، دسته‌بندی خودکار بیماران در گروه‌ها و ارسال مستقیم پیامک فردی'
+      },
+      {
+        src: 'public/assets/aistudio/Screenshot_20261112_032625_Dr_Izady_CRM_c2ebea04.jpg',
+        fallback: 'assets/aistudio/Screenshot_20261112_032625_Dr_Izady_CRM_c2ebea04.jpg',
+        title: '۴. پشتیبان‌گیری و فراخوانی امن محلی و ابری (Dr Izady CRM)',
+        desc: 'ذخیره رمزنگاری‌شده پایگاه داده و سوابق بیماران در حافظه دستگاه (پوشه Downloads) و فضای ابری با بازیابی تک‌کلیده'
+      },
+      {
+        src: 'public/assets/aistudio/IMG_20261108_151135_819_5bfe6c5e.jpg',
+        fallback: 'assets/aistudio/IMG_20261108_151135_819_5bfe6c5e.jpg',
+        title: '۵. هویت بصری و نشان اختصاصی اپلیکیشن دکتر علیرضا ایزدی (Dr Izady CRM)',
+        desc: 'طراحی اختصاصی آیکون و هویت بصری سامانه مدیریت پرونده و ارتباط هوشمند با بیماران'
+      }
+    ];
+
+    var activeLightboxDeck = yaadScreensData;
     var currentLightboxIdx = 0;
 
     function filterYaadScreens(category, btnEl) {
@@ -2046,8 +2795,76 @@
       }
     }
 
-    function openLightbox(idx) {
-      currentLightboxIdx = idx;
+    function filterSupervisorScreens(category, btnEl) {
+      var tabs = document.querySelectorAll('.supervisor-screen-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+      if (btnEl) {
+        btnEl.classList.add('active');
+      }
+
+      var cards = document.querySelectorAll('.supervisor-screen-card');
+      for (var j = 0; j < cards.length; j++) {
+        var card = cards[j];
+        var cat = card.getAttribute('data-sup-cat') || '';
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    }
+
+    function filterMedicalScreens(category, btnEl) {
+      var tabs = document.querySelectorAll('.medical-screen-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+      if (btnEl) {
+        btnEl.classList.add('active');
+      }
+
+      var cards = document.querySelectorAll('.medical-screen-card');
+      for (var j = 0; j < cards.length; j++) {
+        var card = cards[j];
+        var cat = card.getAttribute('data-med-cat') || '';
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    }
+
+    function selectSupervisorTopic() {
+      var selectEl = document.getElementById('sender-topic');
+      if (selectEl) {
+        selectEl.value = 'دمو و سفارش سامانه نظارت کارگاهی (بازساز)';
+      }
+    }
+
+    function selectMedicalCrmTopic() {
+      var selectEl = document.getElementById('sender-topic');
+      if (selectEl) {
+        selectEl.value = 'سفارش / دمو اپلیکیشن CRM بیماران (ویژه پزشکان و کلینیک‌ها)';
+      }
+    }
+
+    function openLightbox(deckOrIdx, maybeIdx) {
+      if (typeof deckOrIdx === 'string') {
+        if (deckOrIdx === 'supervisor') {
+          activeLightboxDeck = supervisorScreensData;
+        } else if (deckOrIdx === 'medical') {
+          activeLightboxDeck = medicalScreensData;
+        } else {
+          activeLightboxDeck = yaadScreensData;
+        }
+        currentLightboxIdx = maybeIdx || 0;
+      } else {
+        activeLightboxDeck = yaadScreensData;
+        currentLightboxIdx = deckOrIdx || 0;
+      }
       renderLightboxSlide();
       var modal = document.getElementById('yaad-lightbox');
       if (modal) modal.classList.add('open');
@@ -2059,12 +2876,14 @@
     }
 
     function stepLightbox(delta) {
-      currentLightboxIdx = (currentLightboxIdx + delta + yaadScreensData.length) % yaadScreensData.length;
+      var deck = activeLightboxDeck || yaadScreensData;
+      currentLightboxIdx = (currentLightboxIdx + delta + deck.length) % deck.length;
       renderLightboxSlide();
     }
 
     function renderLightboxSlide() {
-      var item = yaadScreensData[currentLightboxIdx];
+      var deck = activeLightboxDeck || yaadScreensData;
+      var item = deck[currentLightboxIdx];
       if (!item) return;
       var imgEl = document.getElementById('lightbox-img');
       var titleEl = document.getElementById('lightbox-title');
