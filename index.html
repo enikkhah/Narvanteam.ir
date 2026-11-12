@@ -122,19 +122,46 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 32px;
-      height: 76px;
+      gap: 28px;
+      height: 82px;
+      padding: 0 44px;
     }
 
     .brand-link {
       display: inline-flex;
       align-items: center;
+      gap: 12px;
       flex-shrink: 0;
       white-space: nowrap;
     }
 
+    .header-tree-mark-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 13px;
+      background: linear-gradient(145deg, var(--narvan-green-soft) 0%, var(--narvan-amber-soft) 100%);
+      border: 1px solid rgba(81, 158, 71, 0.28);
+      padding: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 3px 10px rgba(13, 74, 66, 0.08);
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .brand-link:hover .header-tree-mark-wrap {
+      transform: translateY(-1px) scale(1.03);
+    }
+
+    .header-tree-mark {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
     .brand-logo-horizontal {
-      height: 44px;
+      height: 40px;
       width: auto;
       object-fit: contain;
     }
@@ -149,11 +176,11 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 26px;
     }
 
     .nav-links a {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       font-weight: 600;
       color: var(--text-secondary);
       white-space: nowrap;
@@ -187,6 +214,8 @@
       display: flex;
       align-items: center;
       flex-shrink: 0;
+      margin-inline-end: 28px;
+      padding-left: 16px;
     }
 
     .btn {
@@ -219,6 +248,22 @@
       background-color: var(--narvan-teal-dark);
       transform: translateY(-1px);
       box-shadow: 0 6px 16px rgba(13, 74, 66, 0.18);
+    }
+
+    /* Soft Complementary Button (Warm Golden-Apricot & Deep Forest Teal) */
+    .btn-complementary {
+      background: linear-gradient(135deg, #FFF6E0 0%, #FDE5B4 100%);
+      color: var(--narvan-teal-dark);
+      border: 1px solid #F0B44C;
+      box-shadow: 0 3px 12px rgba(238, 161, 37, 0.16);
+      font-weight: 800;
+    }
+
+    .btn-complementary:hover {
+      background: linear-gradient(135deg, #FDE8B9 0%, #FBD386 100%);
+      border-color: var(--narvan-amber-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(238, 161, 37, 0.25);
     }
 
     .btn-yaad {
@@ -1436,6 +1481,13 @@
       .nav-links {
         display: none;
       }
+      .header-inner {
+        padding: 0 18px;
+      }
+      .header-actions {
+        margin-inline-end: 6px;
+        padding-left: 4px;
+      }
       .yaad-spotlight-shell,
       .supervisor-spotlight-shell,
       .medical-spotlight-shell {
@@ -1463,8 +1515,16 @@
   <!-- TOP NAVIGATION BAR (3-Zone Contract) -->
   <header>
     <div class="container header-inner">
-      <!-- Zone 1: Horizontal Corporate Logo -->
+      <!-- Zone 1: Standalone Tree Emblem + Horizontal Corporate Logo -->
       <a href="index.html" class="brand-link" aria-label="گروه فناوری نارون - صفحه اصلی">
+        <span class="header-tree-mark-wrap">
+          <img
+            src="logo-mark.png"
+            alt="نماد درخت گروه فناوری نارون"
+            class="header-tree-mark"
+            referrerpolicy="no-referrer"
+          />
+        </span>
         <img
           src="logo-horizontal.png"
           alt="گروه فناوری نارون | Narvan Team"
@@ -1486,9 +1546,9 @@
         <a href="#contact">تماس با ما</a>
       </nav>
 
-      <!-- Zone 3: Single Primary Action -->
+      <!-- Zone 3: Inward Soft Complementary Action Button -->
       <div class="header-actions">
-        <a href="#medical-crm-showcase" class="btn btn-primary">محصولات و سامانه‌ها</a>
+        <a href="#yaad-showcase" class="btn btn-complementary">مشاهده محصولات</a>
       </div>
     </div>
   </header>
@@ -1508,8 +1568,8 @@
             <p class="hero-lead">
               ما در <strong>گروه فناوری نارون (Narvan Team)</strong> سامانه‌های نرم‌افزاری، اپلیکیشن‌های موبایل با معماری محلی (Local-First)، مدل‌های کاربردی هوش مصنوعی و کنترلرهای سخت‌افزاری اینترنت اشیاء (IoT) را با تمرکز بر پایداری، امنیت داده و تجربه کاربری مهندسی می‌کنیم.
             </p>
-            <div class="hero-cta-row">
-              <a href="#yaad-showcase" class="btn btn-primary">اپلیکیشن یاد (YAAD)</a>
+            <div class="hero-cta-row" style="padding-right: 12px;">
+              <a href="#yaad-showcase" class="btn btn-complementary">مشاهده محصولات</a>
               <a href="#supervisor-showcase" class="btn btn-outline">سامانه نظارت کارگاهی</a>
               <a href="#medical-crm-showcase" class="btn btn-outline">CRM بیماران (ویژه پزشکان)</a>
               <a href="privacy.html" class="btn btn-outline">حریم خصوصی</a>
@@ -2500,6 +2560,10 @@
 
             <ul class="contact-list">
               <li>
+                <span>ایمیل سازمانی گروه فناوری نارون</span>
+                <a href="mailto:info@narvanteam.ir" dir="ltr">info@narvanteam.ir</a>
+              </li>
+              <li>
                 <span>ایمیل رسمی پشتیبانی اپلیکیشن‌ها</span>
                 <a href="mailto:narvanapplications@gmail.com" dir="ltr">narvanapplications@gmail.com</a>
               </li>
@@ -2606,7 +2670,7 @@
 
       <div class="footer-bottom tabular">
         <span>© ۱۴۰۵ (2026) گروه فناوری نارون (Narvan Team). تمامی حقوق محفوظ است.</span>
-        <span>پشتیبانی: <a href="mailto:narvanapplications@gmail.com" dir="ltr" style="color: var(--narvan-teal); font-weight: 700;">narvanapplications@gmail.com</a></span>
+        <span>ارتباط و پشتیبانی: <a href="mailto:info@narvanteam.ir" dir="ltr" style="color: var(--narvan-teal); font-weight: 700;">info@narvanteam.ir</a> · <a href="mailto:narvanapplications@gmail.com" dir="ltr" style="color: var(--narvan-teal); font-weight: 700;">narvanapplications@gmail.com</a></span>
       </div>
     </div>
   </footer>
